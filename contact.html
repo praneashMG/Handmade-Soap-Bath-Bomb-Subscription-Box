@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LatherBox | Handmade Soap & Bath Bomb Subscription Box</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <meta name="description"
+    content="Discover luxurious handmade soaps & bath bombs delivered to your door. Subscribe to LatherBox for a monthly self-care ritual.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6FCF97',    // (Mint Green)
+            accent: '#F43F5E',     // (Rose)
+            secondary: '#000000',  // Black
+            darkGrey: '#111111'    // Dark Grey
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1);
+    }
+
+    #mobileMenu {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .before-after-card:hover .after-image {
+      clip-path: inset(0 0 0 0);
+    }
+
+    .after-image {
+      clip-path: inset(0 0 0 100%);
+      transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-secondary dark:bg-secondary dark:text-gray-100 transition-colors duration-300"
+  data-dir="ltr">
+
+  <nav id="navbar"
+    class="sticky top-0 z-50 transition-colors duration-300 bg-white text-secondary border-b border-gray-100 dark:bg-secondary dark:text-white dark:border-white/10 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 xl:px-8">
+      <a href="index.html" class="flex items-center gap-2 shrink-0 group">
+        <span
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white shadow-lg group-hover:scale-110 transition-transform">
+          <i class="fas fa-soap text-lg"></i> </span>
+
+        <div class="leading-tight">
+          <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+          <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
+        </div>
+      </a>
+      <div class="hidden xl:flex items-center gap-2">
+        <ul class="flex items-center gap-0.5 text-xs font-semibold">
+
+          <!-- Home -->
+          <li class="relative group">
+            <button
+              class="home-trigger flex items-center gap-1 rounded-md px-2.5 py-1.5 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+              <span>Home</span>
+              <i class="fas fa-chevron-down text-[9px]"></i>
+            </button>
+            <ul
+              class="invisible absolute left-0 mt-1.5 w-44 rounded-md bg-white border border-gray-100 dark:bg-secondary dark:border-white/10 p-1.5 opacity-0 shadow-xl transition-all group-hover:visible group-hover:opacity-100 z-50">
+              <li>
+                <a href="index.html"
+                  class="block rounded-md px-3 py-1.5 hover:bg-primary hover:text-white transition-colors">
+                  Home 1
+                </a>
+              </li>
+              <li>
+                <a href="homepage2.html"
+                  class="block rounded-md px-3 py-1.5 hover:bg-primary hover:text-white transition-colors">
+                  Home 2
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Shop -->
+          <li>
+            <a href="shop.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              Shop
+            </a>
+          </li>
+
+          <!-- Subscription Box -->
+          <li>
+            <a href="subscription.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              Subscription Box
+            </a>
+          </li>
+
+          <!-- Best Sellers -->
+          <li>
+            <a href="bestsellers.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              Best Sellers
+            </a>
+          </li>
+
+          <!-- Ingredients -->
+          <li>
+            <a href="ingredients.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              Ingredients
+            </a>
+          </li>
+
+          <!-- Wellness -->
+          <li>
+            <a href="Wellness.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              Wellness
+            </a>
+          </li>
+
+
+          <!-- About -->
+          <li>
+            <a href="aboutus.html"
+              class="block rounded-md px-3 py-1.5 hover:text-primary dark:hover:text-accent transition-colors">
+              About
+            </a>
+          </li>
+
+          <!-- Contact -->
+          <li>
+            <a href="contact.html"
+              class="block rounded-md px-3 py-1.5 bg-accent text-white font-bold shadow-sm transition-colors">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+        <div class="ml-4 flex items-center gap-3 border-l border-gray-200 dark:border-white/10 pl-4">
+          <button id="themeToggleDesktop"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 dark:border-white/10 hover:bg-primary hover:text-white transition-all">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="rtlToggleDesktop"
+            class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 dark:border-white/10 hover:bg-primary hover:text-white transition-all">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+          <div class="ml-2 flex items-center gap-2">
+
+            <!-- Login Button -->
+            <a href="login.html"
+              class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-semibold hover:bg-accent hover:text-white transition-all active:scale-95">
+
+              <i class="fas fa-sign-in-alt text-[10px]"></i>
+              <span>Login</span>
+
+            </a>
+
+            <!-- Signup Button -->
+            <a href="signup.html"
+              class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-semibold text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
+
+              <i class="fas fa-user-plus text-[10px]"></i>
+              <span>Register</span>
+
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 xl:hidden">
+        <button id="themeToggleMobile"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 dark:border-white/10">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="hamburger"
+          class="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-md bg-gray-100 dark:bg-white/5"
+          aria-label="Toggle Menu">
+          <span id="line1" class="h-0.5 w-6 bg-current transition-all duration-300"></span>
+          <span id="line2" class="h-0.5 w-6 bg-current transition-all duration-300"></span>
+          <span id="line3" class="h-0.5 w-6 bg-current transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu"
+      class="hidden border-t border-gray-100 bg-white dark:bg-secondary dark:border-white/5 xl:hidden overflow-hidden transition-all duration-300">
+      <div class="flex flex-col gap-1 p-4">
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-bold list-none hover:bg-gray-50 dark:hover:bg-white/5">
+            <div class="flex items-center gap-4"><i class="fas fa-home w-6 text-accent"></i><span>Home</span></div>
+            <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <div class="mt-1 flex flex-col gap-1 pl-14 text-gray-500 dark:text-gray-400">
+            <a href="index.html" class="py-2 hover:text-accent">Home 1</a>
+            <a href="homepage2.html" class="py-2 hover:text-accent">Home 2</a>
+          </div>
+        </details>
+        <a href="shop.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-store text-accent w-6"></i> Shop
+        </a>
+        <a href="subscription.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-box-open text-accent w-6"></i> Subscription Box
+        </a>
+        <a href="bestsellers.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-star text-accent w-6"></i> Best Sellers
+        </a>
+        <a href="ingredients.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-leaf text-accent w-6"></i> Ingredients
+        </a>
+        <a href="Wellness.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-heartbeat text-accent w-6"></i> Wellness
+        </a>
+
+        <a href="aboutus.html"
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+          <i class="fas fa-info-circle text-accent w-6"></i> About
+        </a>
+        <a href="contact.html"
+          class="flex items-center gap-4 rounded-lg px-4 py-3 text-lg font-bold bg-accent text-white shadow-md">
+          <i class="fas fa-envelope w-6"></i> Contact
+        </a>
+        <div class="mt-4 pt-4 border-t border-gray-100 dark:border-white/10">
+          <button id="rtlToggleMobile"
+            class="flex w-full items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium hover:bg-gray-50 dark:hover:bg-white/5">
+            <i class="fas fa-exchange-alt text-accent w-6"></i> Switch Direction (RTL)
+          </button>
+          <div class="mt-4 flex gap-3">
+
+            <!-- LOGIN -->
+            <a href="login.html"
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-bold text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
+
+              <i class="fas fa-right-to-bracket"></i>
+              Login
+            </a>
+
+            <!-- CREATE -->
+            <a href="signup.html"
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-bold text-white hover:opacity-90 transition-all">
+
+              <i class="fas fa-user-plus"></i>
+              SignUp
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen">
+<section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16 transition-colors duration-300">
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+      
+      <!-- Text Content -->
+      <div class="text-center lg:text-left rtl:lg:text-right order-1 z-10">
+
+        <!-- Badge -->
+        <span class="inline-block px-4 py-1.5 mb-5 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">
+          Get in Touch
+        </span>
+
+        <!-- Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-white leading-tight mb-5">
+          We’re Here to Help
+          <span class="block text-primary italic">
+            You Glow
+          </span>
+        </h1>
+
+        <!-- Paragraph -->
+        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+          Have a question about your subscription, a specific scent, or just want to say hello? Our artisan team is ready to chat.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+
+          <a href="#contact-form"
+             class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-bold rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
+            Send a Message
+          </a>
+
+          <a href="#locations"
+             class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-bold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
+            Our Studio
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Image Content -->
+      <div class="relative order-2 w-full max-w-2xl mx-auto">
+
+        <!-- Decorative Blob -->
+        <div class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-accent/10 rounded-full blur-3xl"></div>
+
+        <!-- Image Card -->
+        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey group">
+          <img 
+            src="/assets/i1.jpg" 
+            alt="LatherBox Studio Workspace"
+            class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+            onerror="this.src='https://placehold.co/800x600/F43F5E/ffffff?text=Get+In+Touch'"
+          >
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-gray-50 dark:bg-darkGrey transition-colors">
+  <div class="mx-auto max-w-7xl px-4 xl:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Phone -->
+      <div class="bg-white dark:bg-secondary p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-white/5 text-center hover:-translate-y-2 transition-all">
+        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary text-2xl">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h4 class="font-bold dark:text-white mb-2">Call Us</h4>
+        <p class="text-sm text-gray-500 mb-4">Mon-Fri from 9am to 5pm.</p>
+        <a href="tel:+44123456789" class="text-primary font-black">+44 123 456 789</a>
+      </div>
+      <!-- Email -->
+      <div class="bg-white dark:bg-secondary p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-white/5 text-center hover:-translate-y-2 transition-all">
+        <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-accent text-2xl">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h4 class="font-bold dark:text-white mb-2">Email Us</h4>
+        <p class="text-sm text-gray-500 mb-4">We respond within 24 hours.</p>
+        <a href="mailto:hello@latherbox.co.uk" class="text-accent font-black">hello@latherbox.co.uk</a>
+      </div>
+      <!-- Address -->
+      <div class="bg-white dark:bg-secondary p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-white/5 text-center hover:-translate-y-2 transition-all">
+        <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary text-2xl">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h4 class="font-bold dark:text-white mb-2">Our Studio</h4>
+        <p class="text-sm text-gray-500 mb-4">Visit our soap kitchen.</p>
+        <p class="text-secondary dark:text-white font-bold text-sm">123 Bubble Lane, Bristol, UK</p>
+      </div>
+      <!-- Chat -->
+      <div class="bg-white dark:bg-secondary p-8 rounded-[2.5rem] shadow-sm border border-gray-100 dark:border-white/5 text-center hover:-translate-y-2 transition-all">
+        <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-accent text-2xl">
+          <i class="fas fa-comments"></i>
+        </div>
+        <h4 class="font-bold dark:text-white mb-2">Live Chat</h4>
+        <p class="text-sm text-gray-500 mb-4">Available on our website.</p>
+        <span class="text-accent font-black cursor-pointer">Start a Chat</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-form" class="py-24 bg-white dark:bg-secondary overflow-hidden">
+  <div class="mx-auto max-w-7xl px-4 xl:px-8">
+    <div class="flex flex-col lg:flex-row items-stretch gap-16">
+      <!-- Form Content -->
+      <div class="w-full lg:w-3/5 bg-gray-50 dark:bg-darkGrey rounded-[3.5rem] p-8 md:p-16 border border-gray-100 dark:border-white/5">
+        <h2 class="text-3xl md:text-4xl font-black text-secondary dark:text-white mb-8">Send a <span class="text-primary italic">Fizz-gram</span></h2>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Full Name</label>
+              <input type="text" placeholder="Sarah Jenkins" class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-primary outline-none transition-all dark:text-white">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Email Address</label>
+              <input type="email" placeholder="sarah@example.com" class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-primary outline-none transition-all dark:text-white">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Subject</label>
+            <select class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-primary outline-none transition-all dark:text-white appearance-none">
+              <option>Subscription Question</option>
+              <option>Wholesale Inquiry</option>
+              <option>Product Feedback</option>
+              <option>Something Else</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Message</label>
+            <textarea rows="5" placeholder="Tell us what's on your mind..." class="w-full px-6 py-4 rounded-2xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-primary outline-none transition-all dark:text-white"></textarea>
+          </div>
+          <button type="submit" class="w-full py-5 bg-primary text-white font-black rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.01] active:scale-95 transition-all">Send Message Now</button>
+        </form>
+      </div>
+      <!-- Visual Side Info -->
+      <div class="w-full lg:w-2/5 flex flex-col justify-between">
+        <div class="bg-secondary rounded-[3rem] p-10 text-white relative overflow-hidden h-full flex flex-col justify-center">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl"></div>
+          <h3 class="text-3xl font-bold mb-6 italic relative z-10">"We love hearing about your bath rituals."</h3>
+          <p class="text-gray-400 mb-10 relative z-10">Whether you're a long-time subscriber or looking for the perfect gift, our support team is just a click away.</p>
+          <div class="space-y-6 relative z-10">
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fas fa-check text-primary"></i></div>
+              <span class="text-sm">Real Humans (Not Bots)</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fas fa-check text-primary"></i></div>
+              <span class="text-sm">Average response time: 2 hours</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fas fa-check text-primary"></i></div>
+              <span class="text-sm">UK Based Studio Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="locations" class="py-12 md:py-16 lg:py-20 bg-gray-50 dark:bg-darkGrey transition-colors duration-300">
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Main Card -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-[2rem] bg-white dark:bg-secondary shadow-xl border border-gray-100 dark:border-white/5">
+
+      <!-- Left Side - Google Map -->
+      <div class="relative h-[320px] sm:h-[420px] lg:h-full min-h-[500px]">
+
+        <iframe
+          src="https://www.google.com/maps?q=The+Soap+Factory+London+United+Kingdom&output=embed"
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <!-- Floating Location Card -->
+        <div
+          class="absolute bottom-5 left-5 right-5 bg-white/90 dark:bg-secondary/90 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-white/20">
+
+          <div class="flex items-center gap-4">
+
+            <div
+              class="h-12 w-12 rounded-full bg-accent text-white flex items-center justify-center text-lg shadow-lg">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-secondary dark:text-white text-sm sm:text-base">
+                The Soap Factory
+              </h4>
+
+              <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                London, United Kingdom
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Side - Content -->
+      <div class="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+
+        <!-- Label -->
+        <span
+          class="inline-block text-primary font-bold tracking-[0.2em] text-[11px] uppercase mb-4">
+          Visit Our Workshop
+        </span>
+
+        <!-- Heading -->
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-black text-secondary dark:text-white leading-tight mb-5">
+          Come Smell
+          <span class="block text-primary italic">
+            The Roses
+          </span>
+        </h2>
+
+        <!-- Description -->
+        <p
+          class="text-sm sm:text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-xl">
+          Discover handcrafted soaps, botanical bath rituals, and artisan wellness experiences inside our London studio. Every product is carefully crafted with nature-inspired ingredients.
+        </p>
+
+        <!-- Info Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+
+          <!-- Weekdays -->
+          <div
+            class="rounded-2xl bg-gray-50 dark:bg-darkGrey/60 p-5 border border-gray-100 dark:border-white/5">
+
+            <div class="flex items-center gap-3">
+
+              <div
+                class="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                <i class="fas fa-clock text-sm"></i>
+              </div>
+
+              <div>
+                <h5
+                  class="font-bold text-secondary dark:text-white text-sm uppercase tracking-wide">
+                  Weekdays
+                </h5>
+
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  9:00 AM — 6:00 PM
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Weekends -->
+          <div
+            class="rounded-2xl bg-gray-50 dark:bg-darkGrey/60 p-5 border border-gray-100 dark:border-white/5">
+
+            <div class="flex items-center gap-3">
+
+              <div
+                class="h-10 w-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center">
+                <i class="fas fa-calendar text-sm"></i>
+              </div>
+
+              <div>
+                <h5
+                  class="font-bold text-secondary dark:text-white text-sm uppercase tracking-wide">
+                  Weekends
+                </h5>
+
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  10:00 AM — 2:00 PM
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://maps.google.com/?q=The+Soap+Factory+London+United+Kingdom"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-secondary dark:bg-white text-white dark:text-secondary font-bold rounded-2xl hover:scale-105 transition-all duration-300 w-full sm:w-fit">
+
+          <i class="fas fa-location-arrow text-sm"></i>
+
+          <span>Get Directions</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="py-20 bg-white dark:bg-secondary transition-colors">
+  <div class="mx-auto max-w-4xl px-4 text-center mb-16">
+    <h2 class="text-3xl font-bold dark:text-white mb-4">Quick Answers</h2>
+    <p class="text-gray-500">Before you send a message, see if we've answered your question here.</p>
+  </div>
+  <div class="mx-auto max-w-3xl px-4 space-y-4">
+    <details class="group bg-gray-50 dark:bg-darkGrey rounded-3xl border border-gray-100 dark:border-white/5 transition-all">
+      <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+        <span class="font-bold dark:text-white">How do I change my subscription scent profile?</span>
+        <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform text-xs"></i>
+      </summary>
+      <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+        You can update your preferences anytime through your dashboard! Log in, go to "My Subscription," and select your new mood category.
+      </div>
+    </details>
+    <details class="group bg-gray-50 dark:bg-darkGrey rounded-3xl border border-gray-100 dark:border-white/5 transition-all">
+      <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+        <span class="font-bold dark:text-white">My box arrived damaged, what should I do?</span>
+        <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform text-xs"></i>
+      </summary>
+      <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+        Oh no! We're so sorry. Please email a photo of the damaged items to hello@latherbox.co.uk and we'll ship out a replacement immediately.
+      </div>
+    </details>
+    <details class="group bg-gray-50 dark:bg-darkGrey rounded-3xl border border-gray-100 dark:border-white/5 transition-all">
+      <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+        <span class="font-bold dark:text-white">Do you offer wholesale for small boutiques?</span>
+        <i class="fas fa-chevron-down text-primary group-open:rotate-180 transition-transform text-xs"></i>
+      </summary>
+      <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+        Yes! We love partnering with local shops. Please fill out the contact form above and select "Wholesale Inquiry" as the subject.
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="py-20 bg-white dark:bg-secondary">
+  <div class="mx-auto max-w-7xl px-4 xl:px-8">
+    <div class="relative bg-primary rounded-[3.5rem] p-12 md:p-20 text-center overflow-hidden border border-white/10 shadow-2xl">
+      <!-- Decorative background glow -->
+      <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white/20 rounded-full blur-3xl"></div>
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
+      
+      <div class="relative z-10">
+        <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Interested in <br>Stocking LatherBox?</h2>
+        <p class="text-white/80 max-w-xl mx-auto mb-10 text-lg">Join our network of 200+ global stockists. From luxury hotels to boutique florists, our products bring a touch of artisan magic to every space.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <button class="px-12 py-5 bg-secondary text-white font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-2xl">Apply for Wholesale</button>
+          <button class="px-12 py-5 border-2 border-white text-white font-black rounded-2xl hover:bg-white hover:text-primary transition-all">Download Brand Kit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="bg-secondary pt-20 pb-10 text-white">
+    <div class="mx-auto max-w-7xl px-4 xl:px-8">
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+
+        <div>
+          <a href="index.html" class="flex items-center gap-3 mb-6">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white shadow-lg">
+              <i class="fas fa-soap text-lg"></i>
+            </span>
+            <div class="leading-tight">
+              <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+              <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
+            </div>
+          </a>
+          <p class="text-gray-400 mb-6">
+            Bringing the spa experience to your doorstep with artisanal soaps and luxurious bath bombs. 
+            
+          </p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-secondary transition-all"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="#"
+              class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-secondary transition-all"><i
+                class="fab fa-instagram"></i></a>
+            <a href="#"
+              class="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:text-secondary transition-all"><i
+                class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="block hover:text-accent transition-colors">Home</a></li>
+            <li><a href="shop.html" class="block hover:text-accent transition-colors">Shop</a></li>
+            <li><a href="subscription.html" class="block hover:text-accent transition-colors">Subscription Box</a></li>
+            <li><a href="Wellness.html" class="block hover:text-accent transition-colors">Wellness</a></li>
+            <li><a href="aboutus.html" class="block hover:text-accent transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="block hover:text-accent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-6">Get in Touch</h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-accent"></i>
+              </div>
+              <div class="text-gray-400">
+                123 Lather Lane, Bubbleside<br>
+                United Kingdom
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
+                <i class="fas fa-phone text-accent"></i>
+              </div>
+              <div class="text-gray-400">+91 80 1234 5678</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
+                <i class="fas fa-envelope text-accent"></i>
+              </div>
+              <div class="text-gray-400">hello@latherbox.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-6">Join the Club</h4>
+          <p class="text-gray-400 mb-4">
+            Get expert self-care tips, exclusive scent reveals, and a sneak peek at next month's box.
+          </p>
+          <form class="space-y-4">
+            <input type="email" placeholder="Work email address"
+              class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent focus:outline-none text-white">
+            <button type="submit"
+              class="w-full bg-accent text-white font-bold py-3 rounded-lg hover:opacity-90 transition-colors">
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        <div>© 2026 LatherBox. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-accent transition-colors">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    const l3 = document.getElementById('line3');
+
+    // Menu Toggle Logic
+    hamburger.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (!isHidden) {
+        l1.style.transform = 'translateY(8px) rotate(45deg)';
+        l2.style.opacity = '0';
+        l3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        l1.style.transform = 'none';
+        l2.style.opacity = '1';
+        l3.style.transform = 'none';
+      }
+    });
+
+    // Theme Logic
+    const themeBtns = [document.getElementById('themeToggleDesktop'), document.getElementById('themeToggleMobile')];
+    function setTheme(isDark) {
+      if (isDark) {
+        htmlEl.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        themeBtns.forEach(btn => btn.innerHTML = '<i class="fas fa-sun"></i>');
+      } else {
+        htmlEl.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        themeBtns.forEach(btn => btn.innerHTML = '<i class="fas fa-moon"></i>');
+      }
+    }
+    themeBtns.forEach(btn => btn.addEventListener('click', () => setTheme(!htmlEl.classList.contains('dark'))));
+    setTheme(localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    // RTL Logic
+    const rtlBtns = [document.getElementById('rtlToggleDesktop'), document.getElementById('rtlToggleMobile')];
+    rtlBtns.forEach(btn => btn.addEventListener('click', () => {
+      const currentDir = bodyEl.getAttribute('dir') || 'ltr';
+      bodyEl.setAttribute('dir', currentDir === 'ltr' ? 'rtl' : 'ltr');
+    }));
+
+    // Calculator Logic
+    function calculateCost() {
+      const sqft = document.getElementById('sqft').value;
+      const grade = document.getElementById('grade').value;
+      const total = document.getElementById('totalCost');
+
+      if (sqft > 0) {
+        const calculation = sqft * grade;
+        // Animate number
+        let current = 0;
+        const step = calculation / 20;
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= calculation) {
+            total.innerText = calculation.toLocaleString();
+            clearInterval(timer);
+          } else {
+            total.innerText = Math.floor(current).toLocaleString();
+          }
+        }, 30);
+      } else {
+        alert("Please enter a valid area size.");
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>LatherBox | Join the Ritual</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <meta name="description" content="Create an account with LatherBox — handmade soaps, bath bombs, and self-care delivered monthly.">
+
+  <!-- Font Awesome & Tailwind -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6FCF97',     // Mint Green
+            accent: '#F43F5E',      // Rose / Bold pink (matches LatherBox brand)
+            secondary: '#000000',
+            darkGrey: '#111111'
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1);
+    }
+
+    body {
+      background: linear-gradient(135deg, #faf7f2 0%, #f0ede8 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .dark body {
+      background: linear-gradient(135deg, #0b0c10 0%, #1a1c23 100%);
+    }
+
+    .auth-card {
+      transition: all 0.3s ease;
+    }
+
+    .input-field {
+      transition: all 0.2s ease;
+    }
+
+    .input-field:focus {
+      ring: 2px solid #F43F5E;
+      border-color: #F43F5E;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #F43F5E 0%, #F9735C 100%);
+    }
+
+    /* Floating Controls exactly like index.html + login page style */
+    .controls {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      z-index: 50;
+    }
+
+    html[dir="rtl"] .controls {
+      right: auto;
+      left: 1rem;
+    }
+
+    .btn-control {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .dark .btn-control {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+
+    .btn-control:hover {
+      background: #F43F5E;
+      color: white;
+      border-color: #F43F5E;
+    }
+
+    /* brand left side overlay & texture */
+    .brand-overlay {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.45) 100%);
+    }
+
+    .blob-bg {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 20%, rgba(244, 63, 94, 0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    /* custom checkbox styling for better visibility */
+    .custom-check:checked {
+      background-color: #F43F5E;
+      border-color: #F43F5E;
+    }
+
+    @media (max-width: 360px) {
+      body { padding: 0.5rem; }
+      .auth-card { border-radius: 1.5rem; }
+      .sm\:p-5 { padding: 0.75rem !important; }
+      h3 { font-size: 1.15rem !important; margin-bottom: 0.25rem !important; }
+      p { font-size: 10px !important; }
+      .w-11.h-11 { width: 2.25rem !important; height: 2.25rem !important; }
+      .w-11.h-11 svg { width: 1.15rem !important; height: 1.15rem !important; }
+      .mb-4, .mb-5 { margin-bottom: 0.5rem !important; }
+      .space-y-2.5, .space-y-3 { gap: 0.6rem !important; }
+      .input-field { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; border-radius: 0.75rem !important; font-size: 12px !important; }
+      .btn-primary { padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; border-radius: 0.75rem !important; }
+      .text-\[9px\] { font-size: 8px !important; }
+      .mt-4 { margin-top: 0.75rem !important; }
+      .h-12.w-12 { width: 2rem !important; height: 2rem !important; }
+      .h-12.w-12 i { font-size: 0.9rem !important; }
+      .text-xl { font-size: 1rem !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-secondary dark:bg-secondary dark:text-gray-100 transition-colors duration-300" data-dir="ltr">
+
+  <!-- Floating Controls (Theme + RTL) exactly matching index -->
+  <div class="controls">
+    <button onclick="toggleRTL()" class="btn-control" title="Switch Direction" aria-label="RTL Toggle">
+      <i class="fas fa-exchange-alt"></i>
+    </button>
+    <button onclick="toggleTheme()" class="btn-control" title="Dark/Light Mode" aria-label="Theme Toggle">
+      <i class="fas fa-moon dark:hidden"></i>
+      <i class="fas fa-sun hidden dark:inline-block"></i>
+    </button>
+  </div>
+
+  <div class="relative w-full max-w-5xl">
+    <div class="auth-card w-full flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-secondary/95 backdrop-blur-sm">
+      
+      <!-- LEFT SIDE: SOAP SPA BRANDING (matches LatherBox identity, same layout as index left) -->
+      <div class="hidden md:flex md:w-5/12 relative p-8 flex-col justify-between bg-cover bg-center"
+           style="background-image: url('/assets/i2.jpg');">
+        <div class="absolute inset-0 bg-black/50 brand-overlay"></div>
+        <!-- decorative elements: soap, bath, herbs -->
+        <div class="absolute inset-0 opacity-20">
+          <i class="fas fa-soap text-8xl absolute bottom-6 right-6 text-white/30"></i>
+          <i class="fas fa-bath text-6xl absolute top-12 left-4 text-white/20"></i>
+          <i class="fas fa-flask text-5xl absolute bottom-32 left-8 text-primary/30"></i>
+          <i class="fas fa-leaf text-5xl absolute top-40 right-8 text-accent/20"></i>
+        </div>
+        
+        <div class="relative z-10">
+          <!-- Logo identical to index.html (LatherBox with icon) -->
+          <a href="index.html" class="flex items-center gap-3 group w-fit">
+            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-accent shadow-md group-hover:scale-105 transition-transform">
+              <i class="fas fa-soap text-white text-xl"></i>
+            </span>
+            <div class="leading-tight">
+              <span class="block text-2xl font-bold tracking-tight text-accent drop-shadow-md">LatherBox</span>
+              <span class="block text-[10px] text-white/70 font-medium tracking-wide">Soap & Bath Bombs</span>
+            </div>
+          </a>
+          
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold text-white leading-tight mb-4">
+              Start Your<br>Spa Ritual Today
+            </h2>
+            <p class="text-white/80 text-sm max-w-xs">
+              Join a community of self-care lovers. Get artisanal soaps and bath bombs crafted with natural essential oils.
+            </p>
+          </div>
+        </div>
+        
+        <div class="relative z-10 mt-12">
+          <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20 shadow-lg">
+            <i class="fas fa-quote-left text-white/50 text-sm mb-2"></i>
+            <p class="italic text-sm text-white/90">"LatherBox turned my daily shower into a moment of pure bliss. The scents are heavenly and the packaging is eco-friendly."</p>
+            <p class="text-xs text-white/70 mt-3 flex items-center gap-1"><i class="fas fa-star text-yellow-300 text-[10px]"></i> — Priya K., Member since 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: SIGNUP FORM (responsive, mobile/tablet perfect) -->
+      <div class="w-full md:w-7/12 flex items-center justify-center p-4 sm:p-5 lg:p-6">
+        <div class="w-full max-w-md">
+          
+          <!-- Mobile Logo (exactly like index.html mobile style) -->
+          <div class="md:hidden text-center mb-6 mt-2">
+            <a href="index.html" class="flex items-center justify-center gap-2 group">
+              <span class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fas fa-soap text-xl"></i>
+              </span>
+              <div class="leading-tight">
+                <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+                <span class="block text-[9px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="mb-4 sm:mb-5 text-center">
+            <h3 class="text-xl sm:text-2xl font-bold text-secondary dark:text-white mb-0.5">
+              Create an Account
+            </h3>
+            <p class="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400">
+              Join LatherBox and get 15% off your first box
+            </p>
+          </div>
+
+          <!-- Social Sign Up Options (consistent with login page) -->
+          <div class="flex justify-center gap-3.5 mb-4">
+            <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary">
+              <svg class="w-5 h-5" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.2 0 6.1 1.1 8.3 3.1l6.2-6.2C34.8 2.4 29.7 0 24 0 14.6 0 6.6 5.5 2.7 13.4l7.3 5.7C11.9 13.1 17.4 9.5 24 9.5z" />
+                <path fill="#34A853" d="M46.1 24.5c0-1.7-.2-3.3-.5-4.9H24v9.3h12.4c-.5 2.9-2.1 5.4-4.5 7.1l6.9 5.4c4-3.7 6.3-9.1 6.3-16.9z" />
+                <path fill="#4A90E2" d="M10 28.7c-.5-1.4-.8-2.9-.8-4.4s.3-3 .8-4.4l-7.3-5.7C1 17.1 0 20.4 0 24s1 6.9 2.7 9.8l7.3-5.7z" />
+                <path fill="#FBBC05" d="M24 48c6.5 0 11.9-2.1 15.8-5.7l-6.9-5.4c-2 1.3-4.6 2.1-8.9 2.1-6.6 0-12.1-3.6-14.1-8.6l-7.3 5.7C6.6 42.5 14.6 48 24 48z" />
+              </svg>
+            </button>
+            <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+              </svg>
+            </button>
+            <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary">
+              <svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.5 9.88v-7H8v-2.88h2.5V9.5c0-2.46 1.47-3.82 3.72-3.82 1.08 0 2.2.2 2.2.2v2.4h-1.24c-1.22 0-1.6.76-1.6 1.54v1.85H16l-.4 2.88h-2.18v7A10 10 0 0022 12z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-3 mb-4">
+            <div class="flex-1 h-px bg-gray-200 dark:bg-white/10"></div>
+            <span class="text-[9px] font-bold uppercase text-gray-400 dark:text-gray-500">or sign up with email</span>
+            <div class="flex-1 h-px bg-gray-200 dark:bg-white/10"></div>
+          </div>
+
+          <!-- Signup Form -->
+          <form class="space-y-2.5 sm:space-y-3" onsubmit="event.preventDefault(); handleSignup();">
+            <div>
+              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">First Name</label>
+              <input type="text" id="firstName" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Emma">
+            </div>
+            <div>
+              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Last Name</label>
+              <input type="text" id="lastName" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Wilson">
+            </div>
+
+            <div>
+              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Email Address</label>
+              <input type="email" id="signupEmail" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="hello@latherbox.com">
+            </div>
+
+            <div>
+              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Password</label>
+              <div class="relative">
+                <input type="password" id="signup-password" required class="input-field w-full px-4 py-2 rounded-xl text-sm pr-10 border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Create password">
+                <button type="button" onclick="togglePasswordVisibility('signup-password', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"><i class="far fa-eye text-xs"></i></button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Confirm Password</label>
+              <div class="relative">
+                <input type="password" id="signup-confirm-password" required class="input-field w-full px-4 py-2 rounded-xl text-sm pr-10 border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Confirm password">
+                <button type="button" onclick="togglePasswordVisibility('signup-confirm-password', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"><i class="far fa-eye text-xs"></i></button>
+              </div>
+            </div>
+
+        <div class="flex items-center gap-2.5 py-1">
+
+  <input 
+    type="checkbox" 
+    id="terms" 
+    required
+    class="w-4 h-4 rounded border-gray-300 dark:border-white/20 text-accent focus:ring-accent focus:ring-1"
+  >
+
+  <label 
+    for="terms" 
+    class="text-[11px] text-gray-500 dark:text-gray-400 leading-normal cursor-pointer"
+  >
+    I agree to LatherBox's <span class="text-accent font-medium hover:underline">Terms</span> & <span class="text-accent font-medium hover:underline">Privacy</span>
+  </label>
+
+</div>
+
+            <button type="submit"
+              class="btn-primary w-full py-3 rounded-xl text-white font-bold text-sm shadow-lg shadow-rose-500/20 mt-1 hover:opacity-90 transition-transform active:scale-95 flex items-center justify-center gap-2">
+              <i class="fas fa-spa text-xs"></i>
+              Start My Ritual
+            </button>
+          </form>
+
+          <p class="text-[10px] mt-4 text-center text-gray-500 dark:text-gray-400">
+            Already have an account?
+            <a href="login.html" class="text-accent font-bold hover:underline">Log in here</a>
+          </p>
+
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Theme Toggle (identical to index behaviour)
+    const htmlElement = document.documentElement;
+    function toggleTheme() {
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    
+    // RTL Toggle
+    const bodyElement = document.body;
+    function toggleRTL() {
+      const currentDir = bodyElement.getAttribute('dir') || 'ltr';
+      bodyElement.setAttribute('dir', currentDir === 'ltr' ? 'rtl' : 'ltr');
+      localStorage.setItem('dir', bodyElement.getAttribute('dir'));
+    }
+    
+    // Password Visibility Toggle (preserves eye icon swap)
+    function togglePasswordVisibility(inputId, buttonEl) {
+      const input = document.getElementById(inputId);
+      const icon = buttonEl.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+    
+    // Handle Signup with validation, demo redirect to user dashboard OR login
+    function handleSignup() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-confirm-password').value;
+      const termsCheck = document.getElementById('terms');
+
+      if (!firstName || !lastName) {
+        alert("Please enter your full name.");
+        return;
+      }
+      
+      if (!email.includes('@') || email.length < 5) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return;
+      }
+      
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+      
+      if (!termsCheck.checked) {
+        alert("Please agree to the Terms & Privacy Policy to continue.");
+        return;
+      }
+      
+      // Demo signup success: store a small flag in localStorage if needed, then redirect to login page (or dashboard)
+      // For consistent flow, we redirect to login with success-like message, but the user can also redirect to user.html
+      // We'll follow the pattern from old signup but using LatherBox integrated experience.
+      alert(`✨ Welcome ${firstName}! Your LatherBox account has been created. Please login to continue.`);
+      window.location.href = 'login.html';
+    }
+    
+    // Apply stored theme & direction (matching index and login)
+    if (localStorage.getItem('theme') === 'dark') {
+      htmlElement.classList.add('dark');
+    } else if (localStorage.getItem('theme') === 'light') {
+      htmlElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      htmlElement.classList.add('dark');
+    }
+    
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir) {
+      bodyElement.setAttribute('dir', savedDir);
+    }
+    
+    // sync theme icons on load for floating controls
+    const updateThemeIcons = () => {
+      const moonIcons = document.querySelectorAll('.btn-control .fa-moon');
+      const sunIcons = document.querySelectorAll('.btn-control .fa-sun');
+      if (htmlElement.classList.contains('dark')) {
+        moonIcons.forEach(icon => icon.classList.add('hidden'));
+        sunIcons.forEach(icon => icon.classList.remove('hidden'));
+      } else {
+        moonIcons.forEach(icon => icon.classList.remove('hidden'));
+        sunIcons.forEach(icon => icon.classList.add('hidden'));
+      }
+    };
+    updateThemeIcons();
+    const observer = new MutationObserver(updateThemeIcons);
+    observer.observe(htmlElement, { attributes: true, attributeFilter: ['class'] });
+    
+    // Smooth RTL handling for any future elements (consistent with overall project)
+  </script>
+</body>
+
+</html>
