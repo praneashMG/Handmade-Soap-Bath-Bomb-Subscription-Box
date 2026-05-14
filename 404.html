@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | LatherBox</title>
+  <link rel="icon" href="assets/logo.png" type="image/jpeg">
+  <meta name="description" content="Oops! The page you're looking for doesn't exist. Return to LatherBox and continue your self-care ritual.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6FCF97',
+            accent: '#F43F5E',
+            secondary: '#000000',
+            darkGrey: '#111111'
+          },
+          fontFamily: {
+            'display': ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    .pulse-slow {
+      animation: pulseSlow 3s ease-in-out infinite;
+    }
+    @keyframes pulseSlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .bubble {
+      position: absolute;
+      background: radial-gradient(circle at 30% 30%, rgba(111, 207, 151, 0.4), rgba(244, 63, 94, 0.2));
+      border-radius: 50%;
+      pointer-events: none;
+      animation: rise 12s infinite ease-in;
+    }
+    @keyframes rise {
+      0% { transform: translateY(100vh) scale(0.2); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-white text-secondary dark:bg-secondary dark:text-gray-100 transition-colors duration-300 overflow-x-hidden" data-dir="ltr">
+
+  <!-- Animated Background Bubbles -->
+  <div id="bubbleContainer" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+  <nav id="navbar"
+    class="sticky top-0 z-50 transition-colors duration-300 bg-white/95 text-secondary border-b border-gray-100 dark:bg-secondary/95 dark:text-white dark:border-white/10 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 xl:px-8">
+      <a href="index.html" class="flex items-center gap-2 shrink-0 group">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white shadow-lg group-hover:scale-110 transition-transform">
+          <i class="fas fa-soap text-lg"></i>
+        </span>
+        <div class="leading-tight">
+          <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+          <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 dark:border-white/10 hover:bg-primary hover:text-white transition-all">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="rtlToggle" class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 dark:border-white/10 hover:bg-primary hover:text-white transition-all">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-[80vh] flex items-center justify-center relative z-10 py-16 px-4">
+    <div class="mx-auto max-w-5xl w-full">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        
+        <!-- Left Side - 404 Illustration -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left rtl:lg:text-right">
+          <div class="relative inline-block mb-6 lg:mb-8 mx-auto lg:mx-0">
+            <span class="text-8xl md:text-9xl font-black text-primary/10 dark:text-primary/5 absolute -top-6 -left-6 select-none">404</span>
+            <div class="relative float-animation">
+              <div class="h-40 w-40 md:h-56 md:w-56 mx-auto lg:mx-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
+                <i class="fas fa-soap text-7xl md:text-8xl text-accent/80"></i>
+              </div>
+              <div class="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 bg-white dark:bg-secondary rounded-full p-3 shadow-lg">
+                <i class="fas fa-question text-2xl md:text-3xl text-accent"></i>
+              </div>
+            </div>
+          </div>
+          <h1 class="text-5xl md:text-7xl font-extrabold text-secondary dark:text-white mb-4">
+            <span class="text-accent">4</span>
+            <span class="text-primary">0</span>
+            <span class="text-accent">4</span>
+          </h1>
+          <p class="text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-4">Page Not Found</p>
+          <div class="h-1 w-20 bg-accent mx-auto lg:mx-0 rounded-full mb-6"></div>
+          <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg max-w-md mx-auto lg:mx-0">
+            Oops! It seems this page has dissolved like a bath bomb in water. 
+            Let's get you back to the bubbly side of life.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="index.html" 
+               class="w-full sm:w-auto px-8 py-4 bg-accent text-white font-bold rounded-xl shadow-lg shadow-accent/30 hover:scale-105 transition-transform duration-300 text-center inline-flex items-center justify-center gap-2 group">
+              <i class="fas fa-home group-hover:translate-x-[-4px] transition-transform rtl:group-hover:translate-x-[4px]"></i>
+              Back to Home
+            </a>
+            <a href="shop.html" 
+               class="w-full sm:w-auto px-8 py-4 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 text-center inline-flex items-center justify-center gap-2 group">
+              <i class="fas fa-store group-hover:translate-x-[-4px] transition-transform rtl:group-hover:translate-x-[4px]"></i>
+              Explore Shop
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm text-gray-500 dark:text-gray-400">
+            <span class="flex items-center gap-1"><i class="fas fa-check-circle text-primary text-xs"></i> Need help?</span>
+            <a href="contact.html" class="text-accent hover:underline flex items-center gap-1">Contact Support <i class="fas fa-arrow-right text-xs rtl:rotate-180"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Side - Suggestions / Popular Links -->
+        <div class="w-full lg:w-1/2">
+          <div class="bg-gray-50 dark:bg-darkGrey/40 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-white/10 shadow-xl">
+            <h3 class="text-xl font-bold text-secondary dark:text-white mb-4 flex items-center gap-2">
+              <i class="fas fa-compass text-accent"></i>
+              You Might Be Looking For:
+            </h3>
+            <div class="space-y-3">
+              <a href="subscription.html" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-secondary/60 border border-gray-100 dark:border-white/5 hover:border-accent hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                    <i class="fas fa-box-open"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold dark:text-white">Subscription Box</p>
+                    <p class="text-xs text-gray-500">Monthly self-care delivered</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all rtl:rotate-180"></i>
+              </a>
+              <a href="bestsellers.html" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-secondary/60 border border-gray-100 dark:border-white/5 hover:border-accent hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-full bg-accent/10 text-accent flex items-center justify-center">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold dark:text-white">Best Sellers</p>
+                    <p class="text-xs text-gray-500">Customer favorites</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all rtl:rotate-180"></i>
+              </a>
+              <a href="ingredients.html" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-secondary/60 border border-gray-100 dark:border-white/5 hover:border-accent hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold dark:text-white">Our Ingredients</p>
+                    <p class="text-xs text-gray-500">Natural & organic</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all rtl:rotate-180"></i>
+              </a>
+              <a href="Wellness.html" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-secondary/60 border border-gray-100 dark:border-white/5 hover:border-accent hover:shadow-md transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="h-10 w-10 rounded-full bg-accent/10 text-accent flex items-center justify-center">
+                    <i class="fas fa-heartbeat"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold dark:text-white">Wellness Guide</p>
+                    <p class="text-xs text-gray-500">Self-care tips & rituals</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all rtl:rotate-180"></i>
+              </a>
+            </div>
+            
+            <!-- Search Suggestion -->
+            <div class="mt-6 pt-4 border-t border-gray-200 dark:border-white/10">
+              <p class="text-sm text-gray-500 dark:text-gray-400 mb-3 flex items-center gap-1">
+                <i class="fas fa-search text-accent text-xs"></i> Can't find what you need?
+              </p>
+              <div class="relative">
+                <input type="text" id="errorSearch" placeholder="Search products, scents, or articles..." 
+                       class="w-full px-4 py-3 pr-12 rounded-xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:border-accent focus:outline-none transition-colors">
+                <button id="searchBtn" class="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all">
+                  <i class="fas fa-arrow-right text-sm rtl:rotate-180"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Theme Logic
+    const htmlEl = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    function setTheme(isDark) {
+      if (isDark) {
+        htmlEl.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        htmlEl.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    }
+    themeBtn.addEventListener('click', () => setTheme(!htmlEl.classList.contains('dark')));
+    setTheme(localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    // RTL Logic
+    const bodyEl = document.body;
+    const rtlBtn = document.getElementById('rtlToggle');
+    rtlBtn.addEventListener('click', () => {
+      const currentDir = bodyEl.getAttribute('dir') || 'ltr';
+      bodyEl.setAttribute('dir', currentDir === 'ltr' ? 'rtl' : 'ltr');
+    });
+
+    // Generate floating bubbles
+    function createBubbles() {
+      const container = document.getElementById('bubbleContainer');
+      const bubbleCount = 25;
+      for (let i = 0; i < bubbleCount; i++) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        const size = Math.random() * 60 + 20;
+        bubble.style.width = `${size}px`;
+        bubble.style.height = `${size}px`;
+        bubble.style.left = `${Math.random() * 100}%`;
+        bubble.style.animationDuration = `${Math.random() * 10 + 8}s`;
+        bubble.style.animationDelay = `${Math.random() * 8}s`;
+        bubble.style.opacity = Math.random() * 0.4 + 0.1;
+        container.appendChild(bubble);
+      }
+    }
+    createBubbles();
+
+    // Search button redirect (simple demo)
+    const searchInput = document.getElementById('errorSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    function handleSearch() {
+      const query = searchInput.value.trim();
+      if (query.length > 0) {
+        alert(`🔍 Searching for "${query}"...\n(Redirect to shop with filters would happen here.)`);
+        // In a real site: window.location.href = `shop.html?search=${encodeURIComponent(query)}`;
+      } else {
+        alert("✨ Type something like 'lavender' or 'bath bomb' to find your perfect match!");
+      }
+    }
+    searchBtn.addEventListener('click', handleSearch);
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleSearch();
+    });
+  </script>
+</body>
+</html>
