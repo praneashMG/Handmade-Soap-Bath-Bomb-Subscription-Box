@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -72,12 +72,12 @@
           <i class="fas fa-soap text-lg"></i> </span>
 
         <div class="leading-tight">
-          <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+          <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
           <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
         </div>
       </a>
       <div class="hidden xl:flex items-center gap-2">
-        <ul class="flex items-center gap-0.5 text-xs font-semibold">
+        <ul class="flex items-center gap-0.5 text-xs font-medium">
 
           <!-- Home -->
           <li class="relative group">
@@ -138,7 +138,7 @@
           <!-- Wellness -->
           <li>
             <a href="Wellness.html"
-              class="block rounded-md px-3 py-1.5 bg-accent text-white font-bold shadow-sm transition-colors">
+              class="block rounded-md px-3 py-1.5 bg-accent text-white font-medium shadow-sm transition-colors">
               Wellness
             </a>
           </li>
@@ -174,18 +174,16 @@
 
             <!-- Login Button -->
             <a href="login.html"
-              class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-semibold hover:bg-accent hover:text-white transition-all active:scale-95">
+              class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-medium hover:bg-accent hover:text-white transition-all active:scale-95">
 
-              <i class="fas fa-sign-in-alt text-[10px]"></i>
               <span>Login</span>
 
             </a>
 
             <!-- Signup Button -->
             <a href="signup.html"
-              class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-semibold text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
+              class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-medium text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
 
-              <i class="fas fa-user-plus text-[10px]"></i>
               <span>Register</span>
 
             </a>
@@ -212,7 +210,7 @@
       <div class="flex flex-col gap-1 p-4">
         <details class="group">
           <summary
-            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-bold list-none hover:bg-gray-50 dark:hover:bg-white/5">
+            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-medium list-none hover:bg-gray-50 dark:hover:bg-white/5">
             <div class="flex items-center gap-4"><i class="fas fa-home w-6 text-accent"></i><span>Home</span></div>
             <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i>
           </summary>
@@ -238,7 +236,7 @@
           <i class="fas fa-leaf text-accent w-6"></i> Ingredients
         </a>
         <a href="Wellness.html"
-          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-bold bg-accent text-white shadow-md">
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium bg-accent text-white shadow-md">
           <i class="fas fa-heartbeat w-6"></i> Wellness
         </a>
 
@@ -259,7 +257,7 @@
 
             <!-- LOGIN -->
             <a href="login.html"
-              class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-bold text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-medium text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
 
               <i class="fas fa-right-to-bracket"></i>
               Login
@@ -267,7 +265,7 @@
 
             <!-- CREATE -->
             <a href="signup.html"
-              class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-bold text-white hover:opacity-90 transition-all">
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-medium text-white hover:opacity-90 transition-all">
 
               <i class="fas fa-user-plus"></i>
               SignUp
@@ -280,77 +278,139 @@
   </nav>
 
   <main class="min-h-screen">
-<section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16 transition-colors duration-300">
+<section class="relative min-h-screen lg:h-screen overflow-hidden bg-white dark:bg-secondary flex items-center transition-colors duration-300">
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
-      
-      <!-- Text Content -->
-      <div class="text-center lg:text-left rtl:lg:text-right order-1 z-10">
+    <!-- Background Glow -->
+    <div class="absolute top-0 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
 
-        <!-- Badge -->
-        <span class="inline-block px-4 py-1.5 mb-5 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">
-          Mindful Bathing
-        </span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-white leading-tight mb-5">
-          Elevate Your Body,
-          <span class="block text-primary italic">
-            Mind & Spirit
-          </span>
-        </h1>
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
 
-        <!-- Paragraph -->
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-          Discover the therapeutic power of artisan-crafted self-care. Transform your daily routine into a mindful ritual that restores balance and melts away the noise of the day.
-        </p>
+            <!-- Image -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
 
-        <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <div class="relative">
 
-          <a href="#rituals"
-             class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-bold rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
-            Explore Rituals
-          </a>
+                    <div class="overflow-hidden rounded-[32px] shadow-2xl border-4 border-white dark:border-darkGrey">
 
-          <a href="#benefits"
-             class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-bold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
-            Why It Matters
-          </a>
+                        <img
+                            src="/assets/g1.jpg"
+                            alt="Wellness Ritual"
+                            class="w-full h-[280px] sm:h-[340px] md:h-[400px] lg:h-[460px] object-cover hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://placehold.co/800x600/6FCF97/ffffff?text=Wellness+Ritual'">
+
+                    </div>
+
+                    <!-- Floating Card -->
+                    <div
+                        class="hidden md:block absolute -bottom-4 -right-4 bg-white dark:bg-darkGrey shadow-xl rounded-2xl px-5 py-4">
+
+                        <p class="text-xs uppercase tracking-wider text-primary font-medium">
+                            Daily Wellness
+                        </p>
+
+                        <h3 class="font-medium text-secondary dark:text-white">
+                            Mindful Self-Care
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div class="lg:col-span-7 order-1 lg:order-2 text-center lg:text-left">
+
+                <span
+                    class="inline-block px-4 py-2 mb-5 text-xs font-medium tracking-widest uppercase bg-primary/10 text-primary rounded-full">
+                    Mindful Bathing
+                </span>
+
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-medium text-secondary dark:text-white leading-tight">
+
+                    Elevate Your Body,
+
+                    <span class="block text-primary italic mt-2">
+                        Mind & Spirit
+                    </span>
+
+                </h1>
+
+                <p
+                    class="mt-5 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+
+                    Discover the therapeutic power of artisan-crafted self-care.
+                    Transform your daily routine into a mindful ritual that restores
+                    balance, reduces stress, and creates moments of calm.
+
+                </p>
+
+                <!-- Buttons -->
+                <div
+                    class="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mt-8">
+
+                    <a href="#rituals"
+                        class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-medium rounded-xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
+                        Explore Rituals
+                    </a>
+
+                    <a href="#benefits"
+                        class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-medium rounded-xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
+                        Why It Matters
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+                <div
+                    class="grid grid-cols-3 gap-4 mt-10 max-w-lg mx-auto lg:mx-0">
+
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-2xl font-medium text-accent">
+                            100%
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Natural
+                        </p>
+                    </div>
+
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-2xl font-medium text-accent">
+                            Daily
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Ritual
+                        </p>
+                    </div>
+
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-2xl font-medium text-accent">
+                            Calm
+                        </h3>
+                        <p class="text-sm text-gray-500">
+                            Living
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-      </div>
-
-      <!-- Image Content -->
-      <div class="relative order-2 w-full max-w-2xl mx-auto">
-
-        <!-- Decorative Blob -->
-        <div class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-primary/10 rounded-full blur-3xl"></div>
-
-        <!-- Image Card -->
-        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey group">
-
-          <img 
-            src="/assets/g1.jpg" 
-            alt="Wellness Ritual Zen"
-            class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            onerror="this.src='https://placehold.co/800x600/6FCF97/ffffff?text=Wellness+Ritual'"
-          >
-
-        </div>
-      </div>
 
     </div>
-  </div>
+
 </section>
 
 <section id="benefits" class="py-20 bg-gray-50 dark:bg-darkGrey transition-colors">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-4 italic">The Science of Soaking</h2>
+      <h2 class="text-3xl md:text-4xl font-medium text-secondary dark:text-white">The Science of Soaking</h2>
+      <div class="h-1.5 w-20 bg-primary mx-auto mt-4 mb-4 rounded-full"></div>
       <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Research shows that a warm bath can improve sleep quality, reduce anxiety, and lower blood pressure.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -358,21 +418,21 @@
         <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
           <i class="fas fa-brain text-2xl text-accent"></i>
         </div>
-        <h3 class="text-xl font-bold dark:text-white mb-4">Mental Clarity</h3>
+        <h3 class="text-xl font-medium dark:text-white mb-4">Mental Clarity</h3>
         <p class="text-sm text-gray-500 leading-relaxed italic">Essential oils like Bergamot and Rosemary help clear brain fog and improve focus during your daily ritual.</p>
       </div>
       <div class="bg-white dark:bg-secondary p-10 rounded-[3rem] shadow-sm hover:shadow-2xl transition-all border border-gray-100 dark:border-white/5 text-center group">
         <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
           <i class="fas fa-bed text-2xl text-primary"></i>
         </div>
-        <h3 class="text-xl font-bold dark:text-white mb-4">Restorative Sleep</h3>
+        <h3 class="text-xl font-medium dark:text-white mb-4">Restorative Sleep</h3>
         <p class="text-sm text-gray-500 leading-relaxed italic">Lavender and Cedarwood interact with your nervous system to signal it's time for deep, restorative rest.</p>
       </div>
       <div class="bg-white dark:bg-secondary p-10 rounded-[3rem] shadow-sm hover:shadow-2xl transition-all border border-gray-100 dark:border-white/5 text-center group">
         <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
           <i class="fas fa-feather text-2xl text-accent"></i>
         </div>
-        <h3 class="text-xl font-bold dark:text-white mb-4">Muscle Relief</h3>
+        <h3 class="text-xl font-medium dark:text-white mb-4">Muscle Relief</h3>
         <p class="text-sm text-gray-500 leading-relaxed italic">Our magnesium-rich salts combined with hot water help relax tension and soothe post-workout soreness.</p>
       </div>
     </div>
@@ -383,28 +443,28 @@
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="flex flex-col lg:flex-row items-center gap-16">
       <div class="w-full lg:w-1/2">
-        <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Guided Experience</span>
-        <h2 class="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-8">Creating Your <span class="text-accent underline decoration-primary">Wellness Ritual</span></h2>
+        <span class="text-primary font-medium tracking-widest text-xs uppercase mb-4 block">Guided Experience</span>
+        <h2 class="text-3xl md:text-5xl font-medium text-secondary dark:text-white mb-8">Creating Your <span class="text-accent underline decoration-primary">Wellness Ritual</span></h2>
         
         <div class="space-y-8">
           <div class="flex gap-6 items-start group">
-            <div class="h-12 w-12 rounded-full border-2 border-primary flex items-center justify-center text-primary font-black shrink-0 group-hover:bg-primary group-hover:text-white transition-all">01</div>
+            <div class="h-12 w-12 rounded-full border-2 border-primary flex items-center justify-center text-primary font-medium shrink-0 group-hover:bg-primary group-hover:text-white transition-all">01</div>
             <div>
-              <h4 class="font-bold dark:text-white mb-1">Set the Atmosphere</h4>
+              <h4 class="font-medium dark:text-white mb-1">Set the Atmosphere</h4>
               <p class="text-sm text-gray-500">Dim the lights, put your phone on silent, and light a natural candle. Preparation is half the ritual.</p>
             </div>
           </div>
           <div class="flex gap-6 items-start group">
-            <div class="h-12 w-12 rounded-full border-2 border-accent flex items-center justify-center text-accent font-black shrink-0 group-hover:bg-accent group-hover:text-white transition-all">02</div>
+            <div class="h-12 w-12 rounded-full border-2 border-accent flex items-center justify-center text-accent font-medium shrink-0 group-hover:bg-accent group-hover:text-white transition-all">02</div>
             <div>
-              <h4 class="font-bold dark:text-white mb-1">Temperature Control</h4>
+              <h4 class="font-medium dark:text-white mb-1">Temperature Control</h4>
               <p class="text-sm text-gray-500">Ensure the water is between 37-39°C. This is the optimal temperature for muscle relaxation and sweat detoxification.</p>
             </div>
           </div>
           <div class="flex gap-6 items-start group">
-            <div class="h-12 w-12 rounded-full border-2 border-primary flex items-center justify-center text-primary font-black shrink-0 group-hover:bg-primary group-hover:text-white transition-all">03</div>
+            <div class="h-12 w-12 rounded-full border-2 border-primary flex items-center justify-center text-primary font-medium shrink-0 group-hover:bg-primary group-hover:text-white transition-all">03</div>
             <div>
-              <h4 class="font-bold dark:text-white mb-1">Intentional Breathing</h4>
+              <h4 class="font-medium dark:text-white mb-1">Intentional Breathing</h4>
               <p class="text-sm text-gray-500">As the bomb fizzes, practice box breathing. Inhale for 4, hold for 4, exhale for 4. Feel the essential oils work.</p>
             </div>
           </div>
@@ -423,31 +483,31 @@
 <section class="py-20 bg-primary/5 dark:bg-darkGrey/50">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-black text-secondary dark:text-white mb-4 uppercase tracking-tighter">Scent Goals</h2>
+      <h2 class="text-3xl font-medium text-secondary dark:text-white mb-4 uppercase tracking-tighter">Scent Goals</h2>
       <p class="text-gray-500">Match your bath to your mood.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Goal 1 -->
       <div class="bg-white dark:bg-secondary rounded-[2.5rem] p-6 sm:p-8 text-center border border-gray-100 dark:border-white/5 hover:bg-primary hover:text-white transition-all cursor-pointer group">
-        <h4 class="font-black text-lg mb-2">Unwind</h4>
+        <h4 class="font-medium text-lg mb-2">Unwind</h4>
         <p class="text-[10px] uppercase tracking-widest opacity-60 mb-6">Nighttime Ritual</p>
         <div class="text-xs italic group-hover:text-white/80">Lavender & Ylang Ylang</div>
       </div>
       <!-- Goal 2 -->
       <div class="bg-white dark:bg-secondary rounded-[2.5rem] p-6 sm:p-8 text-center border border-gray-100 dark:border-white/5 hover:bg-accent hover:text-white transition-all cursor-pointer group">
-        <h4 class="font-black text-lg mb-2">Energize</h4>
+        <h4 class="font-medium text-lg mb-2">Energize</h4>
         <p class="text-[10px] uppercase tracking-widest opacity-60 mb-6">Morning Burst</p>
         <div class="text-xs italic group-hover:text-white/80">Lemon & Peppermint</div>
       </div>
       <!-- Goal 3 -->
       <div class="bg-white dark:bg-secondary rounded-[2.5rem] p-6 sm:p-8 text-center border border-gray-100 dark:border-white/5 hover:bg-primary hover:text-white transition-all cursor-pointer group">
-        <h4 class="font-black text-lg mb-2">Focus</h4>
+        <h4 class="font-medium text-lg mb-2">Focus</h4>
         <p class="text-[10px] uppercase tracking-widest opacity-60 mb-6">Study/Work Prep</p>
         <div class="text-xs italic group-hover:text-white/80">Eucalyptus & Sage</div>
       </div>
       <!-- Goal 4 -->
       <div class="bg-white dark:bg-secondary rounded-[2.5rem] p-6 sm:p-8 text-center border border-gray-100 dark:border-white/5 hover:bg-accent hover:text-white transition-all cursor-pointer group">
-        <h4 class="font-black text-lg mb-2">Self-Love</h4>
+        <h4 class="font-medium text-lg mb-2">Self-Love</h4>
         <p class="text-[10px] uppercase tracking-widest opacity-60 mb-6">Confidence Boost</p>
         <div class="text-xs italic group-hover:text-white/80">Rose & Vanilla</div>
       </div>
@@ -459,20 +519,20 @@
   <div class="mx-auto max-w-5xl px-4 text-center">
     <div class="mb-12">
       <img src="/assets/boy.jpg" class="h-24 w-24 rounded-full mx-auto border-4 border-primary shadow-2xl mb-6" alt="Expert">
-      <h3 class="text-2xl font-bold dark:text-white italic">"Self-care isn't selfish. It's a fundamental part of maintaining mental hygiene in a loud world."</h3>
-      <p class="text-primary font-bold mt-4">Dr. Aris Thorne, Wellness Consultant</p>
+      <h3 class="text-2xl font-medium dark:text-white italic">"Self-care isn't selfish. It's a fundamental part of maintaining mental hygiene in a loud world."</h3>
+      <p class="text-primary font-medium mt-4">Dr. Aris Thorne, Wellness Consultant</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-gray-400">
       <div class="flex flex-col items-center">
-        <span class="text-3xl sm:text-4xl font-black text-secondary dark:text-white mb-1">15k+</span>
+        <span class="text-3xl sm:text-4xl font-medium text-secondary dark:text-white mb-1">15k+</span>
         <span class="text-[10px] sm:text-xs uppercase tracking-widest">Happy Bathing</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-3xl sm:text-4xl font-black text-secondary dark:text-white mb-1">100%</span>
+        <span class="text-3xl sm:text-4xl font-medium text-secondary dark:text-white mb-1">100%</span>
         <span class="text-[10px] sm:text-xs uppercase tracking-widest">Natural Oils</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="text-3xl sm:text-4xl font-black text-secondary dark:text-white mb-1">0%</span>
+        <span class="text-3xl sm:text-4xl font-medium text-secondary dark:text-white mb-1">0%</span>
         <span class="text-[10px] sm:text-xs uppercase tracking-widest">Synthetic Dyes</span>
       </div>
     </div>
@@ -486,11 +546,11 @@
       <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
       
       <div class="relative z-10">
-        <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Your Wellness <br>Journey Starts Here.</h2>
+        <h2 class="text-4xl md:text-6xl font-medium text-white mb-6">Your Wellness <br>Journey Starts Here.</h2>
         <p class="text-gray-400 max-w-xl mx-auto mb-10">Commit to one hour of 'you-time' a week. We'll handle the scents, the bubbles, and the magic.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <button class="px-12 py-5 bg-primary text-white font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">Begin Your Ritual</button>
-          <button class="px-12 py-5 border-2 border-white/20 text-white font-black rounded-2xl hover:bg-white hover:text-secondary transition-all">Gift Wellness</button>
+          <button class="px-12 py-5 bg-primary text-white font-medium rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">Begin Your Ritual</button>
+          <button class="px-12 py-5 border-2 border-white/20 text-white font-medium rounded-2xl hover:bg-white hover:text-secondary transition-all">Gift Wellness</button>
         </div>
       </div>
     </div>
@@ -509,7 +569,7 @@
               <i class="fas fa-soap text-lg"></i>
             </span>
             <div class="leading-tight">
-              <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+              <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
               <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
             </div>
           </a>
@@ -531,7 +591,7 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+          <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
           <ul class="space-y-3 text-sm">
             <li><a href="index.html" class="block hover:text-accent transition-colors">Home</a></li>
             <li><a href="shop.html" class="block hover:text-accent transition-colors">Shop</a></li>
@@ -543,7 +603,7 @@
         </div>
 
         <div>
-          <h4 class="text-lg font-bold mb-6">Get in Touch</h4>
+          <h4 class="text-lg font-medium mb-6">Get in Touch</h4>
           <div class="space-y-4">
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
@@ -570,7 +630,7 @@
         </div>
 
         <div>
-          <h4 class="text-lg font-bold mb-6">Join the Club</h4>
+          <h4 class="text-lg font-medium mb-6">Join the Club</h4>
           <p class="text-gray-400 mb-4">
             Get expert self-care tips, exclusive scent reveals, and a sneak peek at next month's box.
           </p>
@@ -578,7 +638,7 @@
             <input type="email" placeholder="Work email address"
               class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent focus:outline-none text-white">
             <button type="submit"
-              class="w-full bg-accent text-white font-bold py-3 rounded-lg hover:opacity-90 transition-colors">
+              class="w-full bg-accent text-white font-medium py-3 rounded-lg hover:opacity-90 transition-colors">
               Subscribe Now
             </button>
           </form>

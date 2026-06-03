@@ -72,12 +72,12 @@
           <i class="fas fa-soap text-lg"></i> </span>
 
         <div class="leading-tight">
-          <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+          <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
           <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
         </div>
       </a>
       <div class="hidden xl:flex items-center gap-2">
-        <ul class="flex items-center gap-0.5 text-xs font-semibold">
+        <ul class="flex items-center gap-0.5 text-xs font-medium">
 
           <!-- Home -->
           <li class="relative group">
@@ -147,7 +147,7 @@
           <!-- About -->
           <li>
             <a href="aboutus.html"
-              class="block rounded-md px-3 py-1.5 bg-accent text-white font-bold shadow-sm transition-colors">
+              class="block rounded-md px-3 py-1.5 bg-accent text-white font-medium shadow-sm transition-colors">
               About
             </a>
           </li>
@@ -174,18 +174,16 @@
 
             <!-- Login Button -->
             <a href="login.html"
-              class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-semibold hover:bg-accent hover:text-white transition-all active:scale-95">
+              class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-medium hover:bg-accent hover:text-white transition-all active:scale-95">
 
-              <i class="fas fa-sign-in-alt text-[10px]"></i>
               <span>Login</span>
 
             </a>
 
             <!-- Signup Button -->
             <a href="signup.html"
-              class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-semibold text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
+              class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-medium text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
 
-              <i class="fas fa-user-plus text-[10px]"></i>
               <span>Register</span>
 
             </a>
@@ -212,7 +210,7 @@
       <div class="flex flex-col gap-1 p-4">
         <details class="group">
           <summary
-            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-bold list-none hover:bg-gray-50 dark:hover:bg-white/5">
+            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-medium list-none hover:bg-gray-50 dark:hover:bg-white/5">
             <div class="flex items-center gap-4"><i class="fas fa-home w-6 text-accent"></i><span>Home</span></div>
             <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i>
           </summary>
@@ -243,7 +241,7 @@
         </a>
 
         <a href="aboutus.html"
-          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-bold bg-accent text-white shadow-md">
+          class="block items-center gap-4 rounded-lg px-4 py-3 text-lg font-medium bg-accent text-white shadow-md">
           <i class="fas fa-info-circle w-6"></i> About
         </a>
         <a href="contact.html"
@@ -259,7 +257,7 @@
 
             <!-- LOGIN -->
             <a href="login.html"
-              class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-bold text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-medium text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
 
               <i class="fas fa-right-to-bracket"></i>
               Login
@@ -267,7 +265,7 @@
 
             <!-- CREATE -->
             <a href="signup.html"
-              class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-bold text-white hover:opacity-90 transition-all">
+              class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-medium text-white hover:opacity-90 transition-all">
 
               <i class="fas fa-user-plus"></i>
               SignUp
@@ -280,69 +278,177 @@
   </nav>
 
   <main class="min-h-screen">
-<section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16 transition-colors duration-300">
+<section class="relative min-h-screen lg:h-screen overflow-hidden bg-white dark:bg-secondary flex items-center">
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
-      
-      <!-- Text Content -->
-      <div class="text-center lg:text-left rtl:lg:text-right order-1 z-10">
+    <!-- Background Glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
 
-        <!-- Badge -->
-        <span class="inline-block px-4 py-1.5 mb-5 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">
-          The LatherBox Heritage
-        </span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-white leading-tight mb-5">
-          Crafting Care in Every
-          <span class="block text-primary italic">
-            Small Batch
-          </span>
-        </h1>
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
 
-        <!-- Paragraph -->
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-          What started in a small family kitchen is now a movement toward cleaner, more intentional self-care. We believe luxury shouldn't cost the planet.
-        </p>
+            <!-- Story Content -->
+            <div class="lg:col-span-7">
 
-        <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <span
+                    class="inline-block px-4 py-2 mb-5 text-xs font-medium tracking-widest uppercase bg-primary/10 text-primary rounded-full">
+                    The LatherBox Heritage
+                </span>
 
-          <a href="#our-story"
-             class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-bold rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
-            Our Journey
-          </a>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-medium text-secondary dark:text-white leading-tight">
 
-          <a href="shop.html"
-             class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-bold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
-            Shop the Collection
-          </a>
+                    Crafting Care in Every
+
+                    <span class="block text-primary italic mt-2">
+                        Small Batch
+                    </span>
+
+                </h1>
+
+                <p
+                    class="mt-5 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+
+                    What started in a small family kitchen is now a movement toward
+                    cleaner, more intentional self-care. We believe luxury shouldn't
+                    cost the planet.
+
+                </p>
+
+                <!-- Story Timeline -->
+                <div class="mt-8 space-y-5">
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                            01
+                        </div>
+                        <p class="text-secondary dark:text-white font-medium">
+                            Started in a small artisan kitchen
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                            02
+                        </div>
+                        <p class="text-secondary dark:text-white font-medium">
+                            Perfected sustainable soap-making
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                            03
+                        </div>
+                        <p class="text-secondary dark:text-white font-medium">
+                            Delivered self-care to thousands
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 mt-8">
+
+                    <a href="#our-story"
+                        class="px-8 py-3.5 bg-accent text-white font-medium rounded-xl shadow-lg shadow-accent/30 hover:scale-105 transition">
+                        Our Journey
+                    </a>
+
+                    <a href="shop.html"
+                        class="px-8 py-3.5 border-2 border-primary text-primary font-medium rounded-xl hover:bg-primary hover:text-white transition">
+                        Shop Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Image Side -->
+            <div class="lg:col-span-5">
+
+                <div class="relative">
+
+                    <div
+                        class="absolute inset-0 bg-primary/5 rounded-[40px] rotate-3 scale-95">
+                    </div>
+
+                    <div
+                        class="relative overflow-hidden rounded-[40px] shadow-2xl border-4 border-white dark:border-darkGrey">
+
+                        <img
+                            src="/assets/h1.jpg"
+                            alt="Our Story"
+                            class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover hover:scale-105 transition duration-700">
+
+                    </div>
+
+                    <!-- Floating Card -->
+                    <div
+                        class="hidden md:block absolute -bottom-5 left-6 bg-white dark:bg-darkGrey rounded-2xl shadow-xl px-5 py-4">
+
+                        <p class="text-xs uppercase text-primary font-medium">
+                            Since Day One
+                        </p>
+
+                        <h3 class="font-medium text-secondary dark:text-white">
+                            Handmade With Purpose
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-      </div>
 
-      <!-- Image Content -->
-      <div class="relative order-2 w-full max-w-2xl mx-auto">
+    </div>
 
-        <!-- Decorative Blob -->
-        <div class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-accent/10 rounded-full blur-3xl"></div>
+</section>
 
-        <!-- Image Card -->
-        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey group">
-          
-          <img 
-            src="/assets/h1.jpg" 
-            alt="Our Artisan Kitchen"
-            class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            onerror="this.src='https://placehold.co/800x600/6FCF97/ffffff?text=Our+Story'"
-          >
-
+<!-- Stats Section -->
+<section class="py-12 bg-white dark:bg-secondary">
+  <div class="mx-auto max-w-7xl px-4 xl:px-8">
+    <div class="bg-secondary rounded-[3.5rem] p-12 relative overflow-hidden text-center shadow-2xl border border-white/5">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px]"></div>
+      <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <div class="group">
+          <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:-translate-y-2 transition-transform duration-300">
+            <i class="fas fa-bottle-water text-3xl text-primary"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-medium text-white mb-2">50k+</div>
+          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-medium">Plastic Bottles Saved</div>
         </div>
-      </div>
+        
+        <div class="group">
+          <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:-translate-y-2 transition-transform duration-300">
+            <i class="fas fa-leaf text-3xl text-primary"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-medium text-primary mb-2">100%</div>
+          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-medium">Vegan Ingredients</div>
+        </div>
+        
+        <div class="group">
+          <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:-translate-y-2 transition-transform duration-300">
+            <i class="fas fa-flask text-3xl text-accent"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-medium text-white mb-2">124</div>
+          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-medium">Scent Recipes Developed</div>
+        </div>
+        
+        <div class="group">
+          <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:-translate-y-2 transition-transform duration-300">
+            <i class="fas fa-ban text-3xl text-accent"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-medium text-accent mb-2">0</div>
+          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-medium">Synthetic Dyes Used</div>
+        </div>
 
+      </div>
     </div>
   </div>
 </section>
@@ -351,7 +457,7 @@
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="flex flex-col lg:flex-row gap-16 items-center">
       <div class="w-full lg:w-1/2">
-        <h2 class="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-8">From a Kitchen Sink <br>to Your <span class="text-accent underline decoration-primary">Doorstep</span></h2>
+        <h2 class="text-3xl md:text-5xl font-medium text-secondary dark:text-white mb-8">From a Kitchen Sink <br>to Your <span class="text-accent underline decoration-primary">Doorstep</span></h2>
         <div class="space-y-6 text-gray-600 dark:text-gray-400">
           <p>Founded in 2021, LatherBox was born out of a frustration with the synthetic fragrances and plastic waste found in high-street bath products. Our founder, Sarah, began experimenting with cold-process soap making to soothe her own sensitive skin.</p>
           <p>Today, we occupy a small carbon-neutral studio, but our mission remains exactly the same: to create products that smell like real nature, feel like pure luxury, and leave zero footprint behind.</p>
@@ -363,42 +469,60 @@
   <div class="space-y-4">
     
     <!-- Card 1 -->
-    <div class="relative overflow-hidden rounded-[2rem] shadow-lg">
-      <img src="/assets/h2.jpg" 
-           class="h-48 w-full object-cover" 
+    <div class="relative overflow-hidden rounded-[2rem] shadow-lg group">
+      <img src="/assets/lathering_soap.png" 
+           class="h-48 w-full object-cover group-hover:scale-110 transition-transform duration-500" 
            alt="Handmade Lavender Soap">
       
-      <div class="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-4">
-        <span class="text-white font-black text-4xl">100%</span>
-        <p class="text-xs uppercase tracking-[2px] font-semibold text-white mt-2">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span class="text-white font-medium text-4xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">100%</span>
+        <p class="text-xs uppercase tracking-[2px] font-medium text-white mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
           Natural Ingredients
         </p>
       </div>
     </div>
 
-    <!-- Image 2 -->
-    <img src="/assets/h3.jpg" 
-         class="rounded-[2rem] h-64 w-full object-cover shadow-lg" 
-         alt="Bath Bomb Collection">
+    <!-- Card 2 (Image 2) -->
+    <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64">
+      <img src="/assets/colorful_dissolve.png" 
+           class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" 
+           alt="Bath Bomb Collection">
+      
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span class="text-white font-medium text-4xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><i class="fas fa-magic"></i></span>
+        <p class="text-xs uppercase tracking-[2px] font-medium text-white mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+          Artisan Crafted
+        </p>
+      </div>
+    </div>
   </div>
 
   <!-- Right Column -->
   <div class="space-y-4 pt-12">
     
-    <!-- Image 3 -->
-    <img src="/assets/h2.jpg" 
-         class="rounded-[2rem] h-64 w-full object-cover shadow-lg" 
-         alt="Luxury Soap Packaging">
+    <!-- Card 3 (Image 3) -->
+    <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64">
+      <img src="/assets/bath_lifestyle.png" 
+           class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" 
+           alt="Luxury Soap Packaging">
+      
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span class="text-white font-medium text-4xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"><i class="fas fa-paw"></i></span>
+        <p class="text-xs uppercase tracking-[2px] font-medium text-white mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+          Cruelty-Free
+        </p>
+      </div>
+    </div>
 
-    <!-- Card 2 -->
-    <div class="relative overflow-hidden rounded-[2rem] shadow-lg">
-      <img src="/assets/h4.jpg" 
-           class="h-48 w-full object-cover" 
+    <!-- Card 4 -->
+    <div class="relative overflow-hidden rounded-[2rem] shadow-lg group">
+      <img src="/assets/premium_assortment.png" 
+           class="h-48 w-full object-cover group-hover:scale-110 transition-transform duration-500" 
            alt="Self Care Bath">
       
-      <div class="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center p-4">
-        <span class="text-white font-black text-4xl">15k+</span>
-        <p class="text-xs uppercase tracking-[2px] font-semibold text-white mt-2">
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <span class="text-white font-medium text-4xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">15k+</span>
+        <p class="text-xs uppercase tracking-[2px] font-medium text-white mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
           Happy Customers
         </p>
       </div>
@@ -415,22 +539,22 @@
 <section class="py-20 bg-white dark:bg-secondary">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-black text-secondary dark:text-white uppercase tracking-tighter">Our Core Values</h2>
+      <h2 class="text-3xl font-medium text-secondary dark:text-white uppercase tracking-tighter">Our Core Values</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="p-10 rounded-[3rem] bg-gray-50 dark:bg-darkGrey border border-transparent hover:border-primary transition-all group">
         <i class="fas fa-seedling text-3xl text-primary mb-6 group-hover:scale-125 transition-transform"></i>
-        <h4 class="text-xl font-bold dark:text-white mb-4">Plant-Powered</h4>
+        <h4 class="text-xl font-medium dark:text-white mb-4">Plant-Powered</h4>
         <p class="text-sm text-gray-500 leading-relaxed">We exclusively use food-grade oils, therapeutic essential oils, and organic botanicals. No synthetics, ever.</p>
       </div>
       <div class="p-10 rounded-[3rem] bg-gray-50 dark:bg-darkGrey border border-transparent hover:border-accent transition-all group">
         <i class="fas fa-recycle text-3xl text-accent mb-6 group-hover:rotate-180 transition-transform duration-700"></i>
-        <h4 class="text-xl font-bold dark:text-white mb-4">Earth First</h4>
+        <h4 class="text-xl font-medium dark:text-white mb-4">Earth First</h4>
         <p class="text-sm text-gray-500 leading-relaxed">From compostable shipping mailers to biodegradable mica glitters, our packaging is 100% plastic-free.</p>
       </div>
       <div class="p-10 rounded-[3rem] bg-gray-50 dark:bg-darkGrey border border-transparent hover:border-primary transition-all group">
         <i class="fas fa-hand-holding-heart text-3xl text-primary mb-6 group-hover:-translate-y-2 transition-transform"></i>
-        <h4 class="text-xl font-bold dark:text-white mb-4">Small Batch</h4>
+        <h4 class="text-xl font-medium dark:text-white mb-4">Small Batch</h4>
         <p class="text-sm text-gray-500 leading-relaxed">We don't do mass production. Each bomb is hand-pressed and each soap bar is cut by hand in our UK studio.</p>
       </div>
     </div>
@@ -445,15 +569,15 @@
         <img src="/assets/h6.jpg" class="rounded-[3rem] shadow-2xl relative z-10" alt="Founder">
       </div>
       <div class="w-full lg:w-1/2">
-        <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">A Message From Sarah</span>
-        <h3 class="text-3xl md:text-4xl font-black text-secondary dark:text-white mb-6 italic">"You shouldn't have to choose between a fun bath and healthy skin."</h3>
+        <span class="text-primary font-medium tracking-widest text-xs uppercase mb-4 block">A Message From Sarah</span>
+        <h3 class="text-3xl md:text-4xl font-medium text-secondary dark:text-white mb-6 italic">"You shouldn't have to choose between a fun bath and healthy skin."</h3>
         <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
           The bath has always been my place of refuge. When I started LatherBox, I wanted to recreate that feeling for others—the unboxing of a beautiful gift, the scent filling the room, and the knowledge that every ingredient is good for your body and the planet.
         </p>
         <div class="flex items-center gap-4">
-          <div class="h-14 w-14 rounded-full bg-primary flex items-center justify-center text-white font-black">SJ</div>
+          <div class="h-14 w-14 rounded-full bg-primary flex items-center justify-center text-white font-medium">SJ</div>
           <div>
-            <h5 class="font-bold dark:text-white">Sarah Jenkins</h5>
+            <h5 class="font-medium dark:text-white">Sarah Jenkins</h5>
             <p class="text-xs text-gray-500 uppercase tracking-widest">Founder & Head Artisan</p>
           </div>
         </div>
@@ -462,42 +586,17 @@
   </div>
 </section>
 
-<section class="py-20 bg-white dark:bg-secondary">
-  <div class="mx-auto max-w-7xl px-4 xl:px-8">
-    <div class="bg-secondary rounded-[3.5rem] p-12 md:p-20 relative overflow-hidden text-center">
-      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
-      <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div>
-          <div class="text-4xl md:text-5xl font-black text-white mb-2">50k+</div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Plastic Bottles Saved</div>
-        </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-black text-primary mb-2">100%</div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Vegan Ingredients</div>
-        </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-black text-white mb-2">124</div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Scent Recipes Developed</div>
-        </div>
-        <div>
-          <div class="text-4xl md:text-5xl font-black text-accent mb-2">0</div>
-          <div class="text-[10px] text-gray-400 uppercase tracking-[0.2em]">Synthetic Dyes Used</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="py-20 bg-white dark:bg-secondary">
   <div class="mx-auto max-w-5xl px-4 text-center">
     <div class="relative p-12 rounded-[3.5rem] border-2 border-dashed border-gray-200 dark:border-white/10">
-      <h2 class="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-6 leading-tight">Want to See Behind <br>The Scenes?</h2>
+      <h2 class="text-3xl md:text-5xl font-medium text-secondary dark:text-white mb-6 leading-tight">Want to See Behind <br>The Scenes?</h2>
       <p class="text-gray-500 mb-10 max-w-xl mx-auto">Follow our artisan studio on Instagram for daily pours, scent testing, and subscriber-only sneak peeks.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-6">
-        <a href="#" class="px-10 py-4 bg-accent text-white font-bold rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
-          <i class="fab fa-instagram"></i> @LatherBoxUK
+        <a href="#" class="px-10 py-4 bg-accent text-white font-medium rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
+          LatherBoxUK
         </a>
-        <a href="contact.html" class="px-10 py-4 border-2 border-secondary dark:border-white text-secondary dark:text-white font-bold rounded-2xl hover:bg-secondary hover:text-white dark:hover:bg-white dark:hover:text-secondary transition-all text-center">
+        <a href="contact.html" class="px-10 py-4 border-2 border-secondary dark:border-white text-secondary dark:text-white font-medium rounded-2xl hover:bg-secondary hover:text-white dark:hover:bg-white dark:hover:text-secondary transition-all text-center">
           Contact Our Studio
         </a>
       </div>
@@ -516,7 +615,7 @@
               <i class="fas fa-soap text-lg"></i>
             </span>
             <div class="leading-tight">
-              <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+              <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
               <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
             </div>
           </a>
@@ -538,7 +637,7 @@
         </div>
 
         <div>
-          <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+          <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
           <ul class="space-y-3 text-sm">
             <li><a href="index.html" class="block hover:text-accent transition-colors">Home</a></li>
             <li><a href="shop.html" class="block hover:text-accent transition-colors">Shop</a></li>
@@ -550,7 +649,7 @@
         </div>
 
         <div>
-          <h4 class="text-lg font-bold mb-6">Get in Touch</h4>
+          <h4 class="text-lg font-medium mb-6">Get in Touch</h4>
           <div class="space-y-4">
             <div class="flex items-center gap-3">
               <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
@@ -577,7 +676,7 @@
         </div>
 
         <div>
-          <h4 class="text-lg font-bold mb-6">Join the Club</h4>
+          <h4 class="text-lg font-medium mb-6">Join the Club</h4>
           <p class="text-gray-400 mb-4">
             Get expert self-care tips, exclusive scent reveals, and a sneak peek at next month's box.
           </p>
@@ -585,7 +684,7 @@
             <input type="email" placeholder="Work email address"
               class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent focus:outline-none text-white">
             <button type="submit"
-              class="w-full bg-accent text-white font-bold py-3 rounded-lg hover:opacity-90 transition-colors">
+              class="w-full bg-accent text-white font-medium py-3 rounded-lg hover:opacity-90 transition-colors">
               Subscribe Now
             </button>
           </form>

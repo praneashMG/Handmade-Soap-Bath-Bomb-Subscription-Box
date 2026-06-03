@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -186,13 +186,13 @@
               <i class="fas fa-soap text-white text-xl"></i>
             </span>
             <div class="leading-tight">
-              <span class="block text-2xl font-bold tracking-tight text-accent drop-shadow-md">LatherBox</span>
+              <span class="block text-2xl font-medium tracking-tight text-accent drop-shadow-md">LatherBox</span>
               <span class="block text-[10px] text-white/70 font-medium tracking-wide">Soap & Bath Bombs</span>
             </div>
           </a>
           
           <div class="mt-12">
-            <h2 class="text-3xl font-bold text-white leading-tight mb-4">
+            <h2 class="text-3xl font-medium text-white leading-tight mb-4">
               Start Your<br>Spa Ritual Today
             </h2>
             <p class="text-white/80 text-sm max-w-xs">
@@ -221,14 +221,14 @@
                 <i class="fas fa-soap text-xl"></i>
               </span>
               <div class="leading-tight">
-                <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+                <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
                 <span class="block text-[9px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
               </div>
             </a>
           </div>
 
           <div class="mb-4 sm:mb-5 text-center">
-            <h3 class="text-xl sm:text-2xl font-bold text-secondary dark:text-white mb-0.5">
+            <h3 class="text-xl sm:text-2xl font-medium text-secondary dark:text-white mb-0.5">
               Create an Account
             </h3>
             <p class="text-[11px] sm:text-xs text-gray-500 dark:text-gray-400">
@@ -246,10 +246,8 @@
                 <path fill="#FBBC05" d="M24 48c6.5 0 11.9-2.1 15.8-5.7l-6.9-5.4c-2 1.3-4.6 2.1-8.9 2.1-6.6 0-12.1-3.6-14.1-8.6l-7.3 5.7C6.6 42.5 14.6 48 24 48z" />
               </svg>
             </button>
-            <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-              </svg>
+            <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary text-black dark:text-white">
+              <i class="fab fa-apple text-xl"></i>
             </button>
             <button class="w-11 h-11 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-white/5 transition shadow-sm bg-white dark:bg-secondary">
               <svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
@@ -260,25 +258,25 @@
 
           <div class="flex items-center gap-3 mb-4">
             <div class="flex-1 h-px bg-gray-200 dark:bg-white/10"></div>
-            <span class="text-[9px] font-bold uppercase text-gray-400 dark:text-gray-500">or sign up with email</span>
+            <span class="text-[9px] font-medium uppercase text-gray-400 dark:text-gray-500">or sign up with email</span>
             <div class="flex-1 h-px bg-gray-200 dark:bg-white/10"></div>
           </div>
 
           <!-- Signup Form -->
           <form class="space-y-2.5 sm:space-y-3" onsubmit="event.preventDefault(); handleSignup();">
             <div>
-              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Full Name</label>
-              <input type="text" id="firstName" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Emma">
+              <label class="block text-[9px] font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Name</label>
+              <input type="text" id="firstName" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Name">
             </div>
            
 
             <div>
-              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Email Address</label>
+              <label class="block text-[9px] font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Email Address</label>
               <input type="email" id="signupEmail" required class="input-field w-full px-4 py-2 rounded-xl text-sm border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="hello@latherbox.com">
             </div>
 
             <div>
-              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Password</label>
+              <label class="block text-[9px] font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Password</label>
               <div class="relative">
                 <input type="password" id="signup-password" required class="input-field w-full px-4 py-2 rounded-xl text-sm pr-10 border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Create password">
                 <button type="button" onclick="togglePasswordVisibility('signup-password', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"><i class="far fa-eye text-xs"></i></button>
@@ -286,7 +284,7 @@
             </div>
 
             <div>
-              <label class="block text-[9px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Confirm Password</label>
+              <label class="block text-[9px] font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1">Confirm Password</label>
               <div class="relative">
                 <input type="password" id="signup-confirm-password" required class="input-field w-full px-4 py-2 rounded-xl text-sm pr-10 border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary text-secondary dark:text-white" placeholder="Confirm password">
                 <button type="button" onclick="togglePasswordVisibility('signup-confirm-password', this)" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"><i class="far fa-eye text-xs"></i></button>
@@ -312,7 +310,7 @@
 </div>
 
             <button type="submit"
-              class="btn-primary w-full py-3 rounded-xl text-white font-bold text-sm shadow-lg shadow-rose-500/20 mt-1 hover:opacity-90 transition-transform active:scale-95 flex items-center justify-center gap-2">
+              class="btn-primary w-full py-3 rounded-xl text-white font-medium text-sm shadow-lg shadow-rose-500/20 mt-1 hover:opacity-90 transition-transform active:scale-95 flex items-center justify-center gap-2">
               <i class="fas fa-spa text-xs"></i>
               Start My Ritual
             </button>
@@ -320,7 +318,7 @@
 
           <p class="text-[10px] mt-4 text-center text-gray-500 dark:text-gray-400">
             Already have an account?
-            <a href="login.html" class="text-accent font-bold hover:underline">Log in here</a>
+            <a href="login.html" class="text-accent font-medium hover:underline">Log in here</a>
           </p>
 
          

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -72,17 +72,17 @@
                     <i class="fas fa-soap text-lg"></i> </span>
 
                 <div class="leading-tight">
-                    <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+                    <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
                     <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath Bombs</span>
                 </div>
             </a>
             <div class="hidden xl:flex items-center gap-2">
-                <ul class="flex items-center gap-0.5 text-xs font-semibold">
+                <ul class="flex items-center gap-0.5 text-xs font-medium">
 
                     <!-- Home -->
                     <li class="relative group">
                         <button
-                            class="home-trigger flex items-center gap-1 rounded-md px-2.5 py-1.5 bg-accent text-white font-bold shadow-sm transition-colors">
+                            class="home-trigger flex items-center gap-1 rounded-md px-2.5 py-1.5 bg-accent text-white font-medium shadow-sm transition-colors">
                             <span>Home</span>
                             <i class="fas fa-chevron-down text-[9px]"></i>
                         </button>
@@ -174,18 +174,16 @@
 
                         <!-- Login Button -->
                         <a href="login.html"
-                            class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-semibold hover:bg-accent hover:text-white transition-all active:scale-95">
+                            class="inline-flex items-center gap-1.5 rounded-md border border-accent text-accent px-3 py-1.5 text-xs font-medium hover:bg-accent hover:text-white transition-all active:scale-95">
 
-                            <i class="fas fa-sign-in-alt text-[10px]"></i>
                             <span>Login</span>
 
                         </a>
 
                         <!-- Signup Button -->
                         <a href="signup.html"
-                            class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-semibold text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
+                            class="inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-xs font-medium text-white hover:opacity-90 transition-transform active:scale-95 shadow-md shadow-accent/20">
 
-                            <i class="fas fa-user-plus text-[10px]"></i>
                             <span>Register</span>
 
                         </a>
@@ -212,13 +210,13 @@
             <div class="flex flex-col gap-1 p-4">
                 <details class="group">
                     <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-bold list-none bg-accent text-white shadow-md">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-3 text-lg font-medium list-none bg-accent text-white shadow-md">
                         <div class="flex items-center gap-4"><i class="fas fa-home w-6"></i><span>Home</span></div>
                         <i class="fas fa-chevron-down text-xs group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <div class="mt-1 flex flex-col gap-1 pl-14 text-gray-500 dark:text-gray-400">
                         <a href="index.html" class="py-2 hover:text-accent">Home 1</a>
-                        <a href="homepage2.html" class="py-2 text-accent font-bold">Home 2</a>
+                        <a href="homepage2.html" class="py-2 text-accent font-medium">Home 2</a>
                     </div>
                 </details>
                 <a href="shop.html"
@@ -259,7 +257,7 @@
 
                         <!-- LOGIN -->
                         <a href="login.html"
-                            class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-bold text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
+                            class="flex-1 flex items-center justify-center gap-2 rounded-lg border border-antiqueGold py-4 text-lg font-medium text-antiqueGold hover:bg-antiqueGold hover:text-blackMain transition-all">
 
                             <i class="fas fa-right-to-bracket"></i>
                             Login
@@ -267,7 +265,7 @@
 
                         <!-- CREATE -->
                         <a href="signup.html"
-                            class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-bold text-white hover:opacity-90 transition-all">
+                            class="flex-1 flex items-center justify-center gap-2 rounded-lg bg-accent py-4 text-lg font-medium text-white hover:opacity-90 transition-all">
 
                             <i class="fas fa-user-plus"></i>
                             SignUp
@@ -280,84 +278,123 @@
     </nav>
 
     <main class="min-h-screen">
-        <!-- Section 1: Bath Bomb Hero Section -->
-        <section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16">
+<section class="relative overflow-hidden bg-white dark:bg-secondary py-12 lg:py-20">
 
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <!-- Main Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
 
-                    <!-- Content -->
-                    <div class="text-center lg:text-left rtl:lg:text-right order-1">
+            <!-- Image First -->
+            <div class="lg:col-span-7 relative">
 
-                        <!-- Badge -->
-                        <div
-                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs sm:text-sm font-bold mb-5">
-                            <i class="fas fa-sparkles"></i>
-                            <span>The Ultimate Fizz Experience</span>
-                        </div>
+                <!-- Decorative Background -->
+                <div class="absolute inset-0 bg-primary/5 rounded-[40px] rotate-2"></div>
 
-                        <!-- Heading -->
-                        <h1
-                            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-white leading-tight mb-5">
-                            Unbox Your Monthly
-                            <span class="block text-primary italic">
-                                Moment of Zen
-                            </span>
-                        </h1>
+                <div class="relative overflow-hidden rounded-[32px] shadow-2xl">
 
-                        <!-- Paragraph -->
-                        <p
-                            class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-                            Transform your tub into a colorful sanctuary. Hand-pressed bath bombs with essential oils
-                            and hidden botanicals, delivered monthly.
+                    <img src="/assets/b1.jpg"
+                        alt="Bath Bomb"
+                        class="w-full h-[350px] md:h-[500px] object-cover hover:scale-105 transition duration-700">
+
+                </div>
+
+                <!-- Floating Card -->
+                <div
+                    class="hidden md:block absolute bottom-6 left-6 bg-white dark:bg-darkGrey rounded-2xl shadow-xl px-5 py-4">
+
+                    <p class="text-xs uppercase tracking-wider text-accent font-medium">
+                        Monthly Box
+                    </p>
+
+                    <h3 class="font-medium text-secondary dark:text-white">
+                        Fresh Every Month
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <!-- Content -->
+            <div class="lg:col-span-5">
+
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-xs font-medium mb-5">
+                    ✨ The Ultimate Fizz Experience
+                </span>
+
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-medium text-secondary dark:text-white leading-tight">
+
+                    Your Monthly
+
+                    <span class="block text-primary mt-2">
+                        Bath Escape
+                    </span>
+
+                </h1>
+
+                <p
+                    class="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+
+                    Hand-pressed bath bombs infused with essential oils,
+                    vibrant colors, and hidden botanicals to transform
+                    every bath into a luxurious self-care ritual.
+
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
+
+                    <a href="#subscribe"
+                        class="px-8 py-4 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition duration-300 text-center">
+                        Claim Your Box
+                    </a>
+
+                    <a href="#how-it-works"
+                        class="px-8 py-4 border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white transition duration-300 text-center">
+                        How It Works
+                    </a>
+
+                </div>
+
+                <!-- Mini Features -->
+                <div class="grid grid-cols-3 gap-4 mt-10">
+
+                    <div>
+                        <h3 class="font-medium text-accent text-xl">
+                            100%
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Natural
                         </p>
-
-                        <!-- Buttons -->
-                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-
-                            <a href="#subscribe"
-                                class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-bold rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
-                                Claim Your Box
-                            </a>
-
-                            <a href="#how-it-works"
-                                class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-bold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
-                                How It Works
-                            </a>
-
-                        </div>
                     </div>
 
-                    <!-- Image -->
-                    <div class="relative order-2 w-full max-w-2xl mx-auto">
+                    <div>
+                        <h3 class="font-medium text-accent text-xl">
+                            12+
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Scents
+                        </p>
+                    </div>
 
-                        <!-- Decorative Blobs -->
-                        <div
-                            class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-primary/20 rounded-full blur-3xl">
-                        </div>
-
-                        <div
-                            class="absolute -bottom-6 -left-6 w-40 sm:w-56 h-40 sm:h-56 bg-accent/20 rounded-full blur-3xl">
-                        </div>
-
-                        <!-- Image Card -->
-                        <div
-                            class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey">
-
-                            <img src="/assets/b1.jpg"
-                                alt="Bath Bomb"
-                                class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
-                                onerror="this.src='https://placehold.co/1000x1000/6FCF97/ffffff?text=Bath+Bomb+Bliss'">
-
-                        </div>
+                    <div>
+                        <h3 class="font-medium text-accent text-xl">
+                            Monthly
+                        </h3>
+                        <p class="text-xs text-gray-500">
+                            Delivery
+                        </p>
                     </div>
 
                 </div>
-            </div>
-        </section>
 
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
         <!-- Section 2: Why LatherBox Bath Bombs? -->
         <section class="py-20 bg-gray-50 dark:bg-darkGrey/30">
             <div class="mx-auto max-w-7xl px-4 xl:px-8">
@@ -368,7 +405,7 @@
                             class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
                             <i class="fas fa-droplet"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Moisturizing Oils</h3>
+                        <h3 class="text-xl font-medium mb-3 dark:text-white">Moisturizing Oils</h3>
                         <p class="text-gray-500 text-sm">Infused with Almond oil and Shea butter to leave your skin
                             feeling like silk after every soak.</p>
                     </div>
@@ -378,7 +415,7 @@
                             class="w-16 h-16 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
                             <i class="fas fa-wind"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Aromatherapy</h3>
+                        <h3 class="text-xl font-medium mb-3 dark:text-white">Aromatherapy</h3>
                         <p class="text-gray-500 text-sm">Pure therapeutic-grade essential oils designed to relax your
                             mind and soothe your spirit.</p>
                     </div>
@@ -388,7 +425,7 @@
                             class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
                             <i class="fas fa-leaf"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 dark:text-white">Vegan & Natural</h3>
+                        <h3 class="text-xl font-medium mb-3 dark:text-white">Vegan & Natural</h3>
                         <p class="text-gray-500 text-sm">No harsh chemicals, synthetic dyes, glitters. 100%
                             biodegradable and cruelty-free.</p>
                     </div>
@@ -399,7 +436,7 @@
         <!-- Section 3: Subscription Steps -->
         <section id="how-it-works" class="py-20 bg-white dark:bg-secondary overflow-hidden">
             <div class="mx-auto max-w-7xl px-4 xl:px-8 text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-secondary dark:text-white">How Your Subscription Works
+                <h2 class="text-3xl md:text-4xl font-medium text-secondary dark:text-white">How Your Subscription Works
                 </h2>
                 <div class="h-1.5 w-20 bg-primary mx-auto mt-4 rounded-full"></div>
             </div>
@@ -408,9 +445,9 @@
                     <!-- Step 1 -->
                     <div class="flex-1 text-center relative group">
                         <div
-                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-accent text-accent rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-accent text-accent rounded-full flex items-center justify-center text-2xl font-medium mx-auto mb-6 shadow-lg group-hover:bg-accent group-hover:text-white transition-all">
                             1</div>
-                        <h4 class="text-xl font-bold mb-3 dark:text-white">Choose Your Scent Profile</h4>
+                        <h4 class="text-xl font-medium mb-3 dark:text-white">Choose Your Scent Profile</h4>
                         <p class="text-gray-500">Pick from Floral, Citrus, or Earthy themes to customize your monthly
                             surprise.</p>
                     </div>
@@ -422,9 +459,9 @@
                     <!-- Step 2 -->
                     <div class="flex-1 text-center relative group">
                         <div
-                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-primary text-primary rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg group-hover:bg-primary group-hover:text-white transition-all">
+                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-primary text-primary rounded-full flex items-center justify-center text-2xl font-medium mx-auto mb-6 shadow-lg group-hover:bg-primary group-hover:text-white transition-all">
                             2</div>
-                        <h4 class="text-xl font-bold mb-3 dark:text-white">We Hand-Press & Pack</h4>
+                        <h4 class="text-xl font-medium mb-3 dark:text-white">We Hand-Press & Pack</h4>
                         <p class="text-gray-500">Our artisans craft your bombs using seasonal botanicals and
                             zero-plastic wrap.</p>
                     </div>
@@ -436,9 +473,9 @@
                     <!-- Step 3 -->
                     <div class="flex-1 text-center relative group">
                         <div
-                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-accent text-accent rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg group-hover:bg-accent group-hover:text-white transition-all">
+                            class="w-20 h-20 bg-white dark:bg-darkGrey border-4 border-accent text-accent rounded-full flex items-center justify-center text-2xl font-medium mx-auto mb-6 shadow-lg group-hover:bg-accent group-hover:text-white transition-all">
                             3</div>
-                        <h4 class="text-xl font-bold mb-3 dark:text-white">Monthly Delivery</h4>
+                        <h4 class="text-xl font-medium mb-3 dark:text-white">Monthly Delivery</h4>
                         <p class="text-gray-500">Delivered to your door on the 5th of every month. Pause or cancel with
                             one click.</p>
                     </div>
@@ -451,10 +488,10 @@
             <div class="mx-auto max-w-7xl px-4 xl:px-8">
                 <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
                     <div>
-                        <h2 class="text-3xl font-bold dark:text-white">This Month's "Zen Box" Sneak Peek</h2>
+                        <h2 class="text-3xl font-medium dark:text-white">This Month's "Zen Box" Sneak Peek</h2>
                         <p class="text-primary font-medium mt-2">Limited Edition Summer Scents</p>
                     </div>
-                    <a href="shop.html" class="text-accent font-bold hover:underline">View All Scents <i
+                    <a href="shop.html" class="text-accent font-medium hover:underline">View All Scents <i
                             class="fas fa-arrow-right ml-2 rtl:rotate-180"></i></a>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -465,15 +502,15 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 alt="Rose Bomb">
                             <div
-                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-accent">
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-accent">
                                 TOP RATED</div>
                         </div>
                         <div class="p-8">
-                            <h4 class="text-xl font-bold mb-2 dark:text-white">Midnight Jasmine</h4>
+                            <h4 class="text-xl font-medium mb-2 dark:text-white">Midnight Jasmine</h4>
                             <p class="text-gray-500 text-sm mb-6">Infused with real jasmine petals and magnesium salts
                                 for deep sleep.</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-2xl font-bold text-accent">£6.50</span>
+                                <span class="text-2xl font-medium text-accent">£6.50</span>
                                 <button
                                     class="bg-gray-100 dark:bg-white/5 p-4 rounded-2xl hover:bg-primary hover:text-white transition-colors">
                                     <i class="fas fa-plus"></i>
@@ -488,15 +525,15 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 alt="Citrus Bomb">
                             <div
-                                class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">
+                                class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-medium">
                                 MOST FIZZ</div>
                         </div>
                         <div class="p-8">
-                            <h4 class="text-xl font-bold mb-2 dark:text-white">Citrus Sunrise</h4>
+                            <h4 class="text-xl font-medium mb-2 dark:text-white">Citrus Sunrise</h4>
                             <p class="text-gray-500 text-sm mb-6">A blend of orange, and bergamot to energize your
                                 morning soak.</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-2xl font-bold text-accent">£6.00</span>
+                                <span class="text-2xl font-medium text-accent">£6.00</span>
                                 <button
                                     class="bg-gray-100 dark:bg-white/5 p-4 rounded-2xl hover:bg-primary hover:text-white transition-colors">
                                     <i class="fas fa-plus"></i>
@@ -512,11 +549,11 @@
                                 alt="Eucalyptus Bomb">
                         </div>
                         <div class="p-8">
-                            <h4 class="text-xl font-bold mb-2 dark:text-white">Eucalyptus Frost</h4>
+                            <h4 class="text-xl font-medium mb-2 dark:text-white">Eucalyptus Frost</h4>
                             <p class="text-gray-500 text-sm mb-6">Cooling menthol and eucalyptus to clear your senses
                                 and refresh skin.</p>
                             <div class="flex items-center justify-between">
-                                <span class="text-2xl font-bold text-accent">£7.00</span>
+                                <span class="text-2xl font-medium text-accent">£7.00</span>
                                 <button
                                     class="bg-gray-100 dark:bg-white/5 p-4 rounded-2xl hover:bg-primary hover:text-white transition-colors">
                                     <i class="fas fa-plus"></i>
@@ -532,16 +569,17 @@
         <section id="subscribe" class="py-20 bg-white dark:bg-secondary">
             <div class="mx-auto max-w-7xl px-4 xl:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-bold text-secondary dark:text-white mb-4">Choose Your Box</h2>
+                    <h2 class="text-3xl md:text-4xl font-medium text-secondary dark:text-white">Choose Your Box</h2>
+                    <div class="h-1.5 w-20 bg-primary mx-auto mt-4 mb-4 rounded-full"></div>
                     <p class="text-gray-500">Pick a plan that fits your bathing ritual.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <!-- Plan 1 -->
                     <div
                         class="bg-white dark:bg-darkGrey p-10 rounded-[3rem] border border-gray-100 dark:border-white/5 shadow-xl flex flex-col hover:-translate-y-2 transition-transform">
-                        <h3 class="text-2xl font-bold mb-2 dark:text-white">Casual Soak</h3>
+                        <h3 class="text-2xl font-medium mb-2 dark:text-white">Casual Soak</h3>
                         <p class="text-gray-500 mb-8">Perfect for the occasional self-care treat.</p>
-                        <div class="text-4xl font-black text-primary mb-8">£19.99<span
+                        <div class="text-4xl font-medium text-primary mb-8">£19.99<span
                                 class="text-sm font-normal text-gray-400">/mo</span></div>
                         <ul class="space-y-4 mb-10 flex-grow">
                             <li class="flex items-center gap-3 text-sm dark:text-gray-300">
@@ -555,18 +593,18 @@
                             </li>
                         </ul>
                         <button
-                            class="w-full py-4 rounded-2xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all">Select
+                            class="w-full py-4 rounded-2xl border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all">Select
                             Plan</button>
                     </div>
                     <!-- Plan 2 (Featured) -->
                     <div
                         class="relative bg-secondary dark:bg-white p-10 rounded-[3rem] shadow-2xl flex flex-col hover:-translate-y-2 transition-transform overflow-hidden">
                         <div
-                            class="absolute top-10 right-[-35px] bg-accent text-white py-1 px-10 rotate-45 text-[10px] font-bold">
+                            class="absolute top-10 right-[-35px] bg-accent text-white py-1 px-10 rotate-45 text-[10px] font-medium">
                             BEST VALUE</div>
-                        <h3 class="text-2xl font-bold mb-2 text-white dark:text-secondary">The Super Fizz</h3>
+                        <h3 class="text-2xl font-medium mb-2 text-white dark:text-secondary">The Super Fizz</h3>
                         <p class="text-gray-400 dark:text-gray-500 mb-8">The ultimate ritual for deep relaxation.</p>
-                        <div class="text-4xl font-black text-accent mb-8">£34.99<span
+                        <div class="text-4xl font-medium text-accent mb-8">£34.99<span
                                 class="text-sm font-normal text-gray-500">/mo</span></div>
                         <ul class="space-y-4 mb-10 flex-grow">
                             <li class="flex items-center gap-3 text-sm text-white/80 dark:text-secondary/80">
@@ -583,7 +621,7 @@
                             </li>
                         </ul>
                         <button
-                            class="w-full py-4 rounded-2xl bg-accent text-white font-bold shadow-lg shadow-accent/30 hover:scale-105 transition-all">Subscribe
+                            class="w-full py-4 rounded-2xl bg-accent text-white font-medium shadow-lg shadow-accent/30 hover:scale-105 transition-all">Subscribe
                             Now</button>
                     </div>
                 </div>
@@ -596,7 +634,7 @@
                 <div
                     class="flex flex-col lg:flex-row items-center gap-12 bg-white dark:bg-secondary p-8 md:p-16 rounded-[3rem] shadow-2xl">
                     <div class="w-full lg:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 dark:text-white leading-tight">Join 10,000+ Bath
+                        <h2 class="text-3xl md:text-4xl font-medium mb-6 dark:text-white leading-tight">Join 10,000+ Bath
                             Lovers Who Fizz Every Month</h2>
                         <div class="space-y-6">
                             <div class="flex gap-4">
@@ -619,13 +657,13 @@
                     <div class="w-full lg:w-1/2">
                         <form
                             class="p-8 bg-gray-50 dark:bg-darkGrey rounded-3xl border border-gray-100 dark:border-white/5">
-                            <h4 class="text-lg font-bold mb-4 dark:text-white">Get a 15% discount on your first box!
+                            <h4 class="text-lg font-medium mb-4 dark:text-white">Get a 15% discount on your first box!
                             </h4>
                             <div class="space-y-4">
                                 <input type="email" placeholder="Your best email"
                                     class="w-full px-5 py-4 rounded-2xl bg-white dark:bg-secondary border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-primary outline-none text-secondary dark:text-white">
                                 <button type="submit"
-                                    class="w-full py-4 bg-primary text-white font-bold rounded-2xl shadow-lg hover:shadow-primary/30 transition-all">Send
+                                    class="w-full py-4 bg-primary text-white font-medium rounded-2xl shadow-lg hover:shadow-primary/30 transition-all">Send
                                     My Coupon</button>
                             </div>
                             <p class="text-[10px] text-gray-400 mt-4 text-center">By signing up, you agree to receive
@@ -649,7 +687,7 @@
                             <i class="fas fa-soap text-lg"></i>
                         </span>
                         <div class="leading-tight">
-                            <span class="block text-xl font-bold tracking-tight text-accent">LatherBox</span>
+                            <span class="block text-xl font-medium tracking-tight text-accent">LatherBox</span>
                             <span class="block text-[10px] text-gray-400 font-medium tracking-wide">Soap & Bath
                                 Bombs</span>
                         </div>
@@ -672,7 +710,7 @@
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="index.html" class="block hover:text-accent transition-colors">Home</a></li>
                         <li><a href="shop.html" class="block hover:text-accent transition-colors">Shop</a></li>
@@ -685,7 +723,7 @@
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Get in Touch</h4>
+                    <h4 class="text-lg font-medium mb-6">Get in Touch</h4>
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
                             <div class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center">
@@ -712,7 +750,7 @@
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Join the Club</h4>
+                    <h4 class="text-lg font-medium mb-6">Join the Club</h4>
                     <p class="text-gray-400 mb-4">
                         Get expert self-care tips, exclusive scent reveals, and a sneak peek at next month's box.
                     </p>
@@ -720,7 +758,7 @@
                         <input type="email" placeholder="Work email address"
                             class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:border-accent focus:outline-none text-white">
                         <button type="submit"
-                            class="w-full bg-accent text-white font-bold py-3 rounded-lg hover:opacity-90 transition-colors">
+                            class="w-full bg-accent text-white font-medium py-3 rounded-lg hover:opacity-90 transition-colors">
                             Subscribe Now
                         </button>
                     </form>
