@@ -278,136 +278,131 @@
   </nav>
 
   <main class="min-h-screen">
-<section class="relative min-h-screen lg:h-screen overflow-hidden bg-white dark:bg-secondary flex items-center">
+<section class="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden flex items-center justify-center">
 
-    <!-- Background Glow -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+    <!-- Background Image -->
+    <img
+        src="/assets/h1.jpg"
+        alt="Our Story"
+        class="absolute inset-0 w-full h-full object-cover">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-secondary/65"></div>
 
-        <div class="grid lg:grid-cols-12 gap-8 items-center">
+    <!-- Decorative Glow -->
+    <div class="absolute top-20 left-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl"></div>
 
-            <!-- Story Content -->
-            <div class="lg:col-span-7">
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
 
-                <span
-                    class="inline-block px-4 py-2 mb-5 text-xs font-medium tracking-widest uppercase bg-primary/10 text-primary rounded-full">
-                    The LatherBox Heritage
-                </span>
+        <!-- Badge -->
+        <span
+            class="inline-block px-5 py-2 mb-5 text-xs font-medium tracking-widest uppercase bg-white/10 backdrop-blur-md text-white rounded-full border border-white/20">
+            The LatherBox Heritage
+        </span>
 
-                <h1
-                    class="text-4xl md:text-5xl lg:text-6xl font-medium text-secondary dark:text-white leading-tight">
+        <!-- Heading -->
+        <h1
+            class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
 
-                    Crafting Care in Every
+            Crafting Care In Every
 
-                    <span class="block text-primary italic mt-2">
-                        Small Batch
-                    </span>
+            <span class="block text-primary italic mt-2">
+                Small Batch
+            </span>
 
-                </h1>
+        </h1>
 
-                <p
-                    class="mt-5 text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+        <!-- Description -->
+        <p
+            class="mt-4 text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
 
-                    What started in a small family kitchen is now a movement toward
-                    cleaner, more intentional self-care. We believe luxury shouldn't
-                    cost the planet.
+            What started in a small family kitchen is now a movement toward
+            cleaner, more intentional self-care. We believe luxury shouldn't
+            cost the planet and every product should be crafted with purpose.
 
+        </p>
+
+        <!-- Story Cards -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto mt-8">
+
+            <div
+                class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/10">
+
+                <div
+                    class="w-10 h-10 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                    01
+                </div>
+
+                <h3 class="text-white font-medium mt-4">
+                    Humble Beginning
+                </h3>
+
+                <p class="text-white/70 text-sm mt-2">
+                    Started in a small artisan kitchen with a passion for natural care.
                 </p>
 
-                <!-- Story Timeline -->
-                <div class="mt-8 space-y-5">
+            </div>
 
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
-                            01
-                        </div>
-                        <p class="text-secondary dark:text-white font-medium">
-                            Started in a small artisan kitchen
-                        </p>
-                    </div>
+            <div
+                class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/10">
 
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
-                            02
-                        </div>
-                        <p class="text-secondary dark:text-white font-medium">
-                            Perfected sustainable soap-making
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-medium">
-                            03
-                        </div>
-                        <p class="text-secondary dark:text-white font-medium">
-                            Delivered self-care to thousands
-                        </p>
-                    </div>
-
+                <div
+                    class="w-10 h-10 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                    02
                 </div>
 
-                <!-- Buttons -->
-                <div class="flex flex-wrap gap-4 mt-8">
+                <h3 class="text-white font-medium mt-4">
+                    Sustainable Craft
+                </h3>
 
-                    <a href="#our-story"
-                        class="px-8 py-3.5 bg-accent text-white font-medium rounded-xl shadow-lg shadow-accent/30 hover:scale-105 transition">
-                        Our Journey
-                    </a>
-
-                    <a href="shop.html"
-                        class="px-8 py-3.5 border-2 border-primary text-primary font-medium rounded-xl hover:bg-primary hover:text-white transition">
-                        Shop Collection
-                    </a>
-
-                </div>
+                <p class="text-white/70 text-sm mt-2">
+                    Perfected eco-friendly soap making and bath bomb crafting using premium botanicals.
+                </p>
 
             </div>
 
-            <!-- Image Side -->
-            <div class="lg:col-span-5">
+            <div
+                class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/10">
 
-                <div class="relative">
-
-                    <div
-                        class="absolute inset-0 bg-primary/5 rounded-[40px] rotate-3 scale-95">
-                    </div>
-
-                    <div
-                        class="relative overflow-hidden rounded-[40px] shadow-2xl border-4 border-white dark:border-darkGrey">
-
-                        <img
-                            src="/assets/h1.jpg"
-                            alt="Our Story"
-                            class="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover hover:scale-105 transition duration-700">
-
-                    </div>
-
-                    <!-- Floating Card -->
-                    <div
-                        class="hidden md:block absolute -bottom-5 left-6 bg-white dark:bg-darkGrey rounded-2xl shadow-xl px-5 py-4">
-
-                        <p class="text-xs uppercase text-primary font-medium">
-                            Since Day One
-                        </p>
-
-                        <h3 class="font-medium text-secondary dark:text-white">
-                            Handmade With Purpose
-                        </h3>
-
-                    </div>
-
+                <div
+                    class="w-10 h-10 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-medium">
+                    03
                 </div>
 
+                <h3 class="text-white font-medium mt-4">
+                    Growing Community
+                </h3>
+
+                <p class="text-white/70 text-sm mt-2">
+                    Bringing mindful self-care rituals to customers worldwide.
+                </p>
+
             </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div
+            class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+
+            <a href="#our-story"
+                class="px-8 py-3.5 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300">
+                Our Journey
+            </a>
+
+            <a href="shop.html"
+                class="px-8 py-3.5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium rounded-2xl hover:bg-white/20 transition-all duration-300">
+                Shop Collection
+            </a>
 
         </div>
 
     </div>
 
 </section>
-
 <!-- Stats Section -->
 <section class="py-12 bg-white dark:bg-secondary">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
@@ -459,7 +454,7 @@
       <div class="w-full lg:w-1/2">
         <h2 class="text-3xl md:text-5xl font-medium text-secondary dark:text-white mb-8">From a Kitchen Sink <br>to Your <span class="text-accent underline decoration-primary">Doorstep</span></h2>
         <div class="space-y-6 text-gray-600 dark:text-gray-400">
-          <p>Founded in 2021, LatherBox was born out of a frustration with the synthetic fragrances and plastic waste found in high-street bath products. Our founder, Sarah, began experimenting with cold-process soap making to soothe her own sensitive skin.</p>
+          <p>Founded in 2021, LatherBox was born out of a frustration with the synthetic fragrances and plastic waste found in high-street bath products. Our founder, Sarah, began experimenting with cold-process soap making and soothing bath bombs to heal her own sensitive skin.</p>
           <p>Today, we occupy a small carbon-neutral studio, but our mission remains exactly the same: to create products that smell like real nature, feel like pure luxury, and leave zero footprint behind.</p>
         </div>
       </div>
@@ -470,7 +465,7 @@
     
     <!-- Card 1 -->
     <div class="relative overflow-hidden rounded-[2rem] shadow-lg group">
-      <img src="/assets/lathering_soap.png" 
+      <img src="/assets/lathering_handmade_soap.png" 
            class="h-48 w-full object-cover group-hover:scale-110 transition-transform duration-500" 
            alt="Handmade Lavender Soap">
       
@@ -484,7 +479,7 @@
 
     <!-- Card 2 (Image 2) -->
     <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64">
-      <img src="/assets/colorful_dissolve.png" 
+      <img src="/assets/colorful_bath_bomb.png" 
            class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" 
            alt="Bath Bomb Collection">
       
@@ -502,7 +497,7 @@
     
     <!-- Card 3 (Image 3) -->
     <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64">
-      <img src="/assets/bath_lifestyle.png" 
+      <img src="/assets/relaxing_bath_experience.png" 
            class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" 
            alt="Luxury Soap Packaging">
       

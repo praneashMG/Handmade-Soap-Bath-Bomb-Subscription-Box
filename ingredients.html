@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -278,72 +278,107 @@
   </nav>
 
   <main class="min-h-screen">
-<section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16 transition-colors duration-300">
+<section class="relative h-screen overflow-hidden flex items-center justify-center bg-white dark:bg-secondary">
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-10 xl:gap-16">
-      
-      <!-- Text Content -->
-      <div class="text-center xl:text-left rtl:xl:text-right order-1 z-10">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+
+        <img
+            src="/assets/f1.jpg"
+            alt="Pure Botanical Ingredients"
+            class="w-full h-full object-cover">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-secondary/50"></div>
+
+    </div>
+
+    <!-- Decorative Blur -->
+    <div class="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-20 w-72 h-72 bg-accent/20 rounded-full blur-3xl"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
 
         <!-- Badge -->
-        <span class="inline-block px-4 py-1.5 mb-5 text-xs font-medium tracking-widest uppercase bg-primary/10 text-primary rounded-full">
-          The Ultimate Fizz Experience
+        <span
+            class="inline-block px-5 py-2 mb-6 text-xs font-medium tracking-widest uppercase bg-white/10 backdrop-blur-md text-white rounded-full border border-white/20">
+            The Ultimate Fizz Experience
         </span>
 
         <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium text-secondary dark:text-white leading-tight mb-5">
-          Crafted With Nature's
-          <span class="block text-primary italic">
-            Purest Elements
-          </span>
+        <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-white leading-tight">
+
+            Crafted With Nature's
+
+            <span class="block text-primary italic mt-2">
+                Purest Elements
+            </span>
+
         </h1>
 
         <!-- Paragraph -->
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-          We believe what goes on your body is as important as what goes in it. Explore our strictly non-toxic, food-grade ingredients.
+        <p
+            class="mt-6 text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+
+            We believe what goes on your body is as important as what goes in it.
+            Explore our strictly non-toxic, food-grade ingredients sourced from nature.
+
         </p>
 
         <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center xl:justify-start gap-4">
+        <div
+            class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
 
-          <a href="#core-ingredients"
-             class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
-            Explore Botanicals
-          </a>
+            <a href="#core-ingredients"
+                class="px-8 py-4 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300">
+                Explore Botanicals
+            </a>
 
-          <a href="#transparency"
-             class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
-            Our Transparency
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Image Content -->
-      <div class="relative order-2 w-full max-w-2xl mx-auto">
-
-        <!-- Decorative Blob -->
-        <div class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-primary/10 rounded-full blur-3xl"></div>
-
-        <!-- Image Card -->
-        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey group">
-          <img 
-            src="/assets/f1.jpg" 
-            alt="Pure Botanical Ingredients"
-            class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            onerror="this.src='https://placehold.co/800x600/6FCF97/ffffff?text=Botanicals'"
-          >
+            <a href="#transparency"
+                class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium rounded-2xl hover:bg-white/20 transition-all duration-300">
+                Our Transparency
+            </a>
 
         </div>
-      </div>
+
+        <!-- Ingredient Highlights -->
+        <div
+            class="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-12">
+
+            <div>
+                <h3 class="text-2xl font-medium text-white">
+                    100%
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Natural
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-medium text-white">
+                    0%
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Toxins
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-medium text-white">
+                    Pure
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Botanicals
+                </p>
+            </div>
+
+        </div>
 
     </div>
-  </div>
-</section>
 
+</section>
 <section id="core-ingredients" class="py-20 bg-gray-50 dark:bg-darkGrey transition-colors">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
     <div class="text-center mb-16">
@@ -375,13 +410,13 @@
         <h3 class="text-xl font-medium dark:text-white mb-3">Dead Sea Salt</h3>
         <p class="text-sm text-gray-500 leading-relaxed">Mineral-rich salts that detoxify the skin and soothe tired, aching muscles.</p>
       </div>
-       <!-- Ingredient 3 -->
+       <!-- Ingredient 4 -->
       <div class="group bg-white dark:bg-secondary p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-white/5 text-center">
-        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-<i class="fas fa-leaf text-3xl text-[#c43f3f]"></i>
+        <div class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+<i class="fas fa-magic text-3xl text-accent"></i>
         </div>
-        <h3 class="text-xl font-medium dark:text-white mb-3">French Clay</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">Mineral-rich salts that detoxify the skin and soothe tired, aching muscles.</p>
+        <h3 class="text-xl font-medium dark:text-white mb-3">Citric Acid & Baking Soda</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">The dynamic duo behind our bath bombs' signature fizz, gently cleansing and softening the water.</p>
       </div>
     
     </div>

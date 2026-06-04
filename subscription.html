@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -278,70 +278,99 @@
   </nav>
 
   <main class="min-h-screen">
-<section class="relative overflow-hidden bg-white dark:bg-secondary py-10 md:py-14 lg:py-16 transition-colors duration-300">
+<section class="relative h-screen overflow-hidden flex items-center justify-center">
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
-      
-      <!-- Text Content -->
-      <div class="text-center lg:text-left rtl:lg:text-right order-1 z-10">
+    <!-- Background Image -->
+    <img
+        src="/assets/d1.jpg"
+        alt="Monthly LatherBox"
+        class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/45"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
 
         <!-- Badge -->
-        <span class="inline-block px-4 py-1.5 mb-5 text-xs font-medium tracking-widest uppercase bg-accent/10 text-accent rounded-full">
-          The Ultimate Fizz Club
+        <span
+            class="inline-block px-5 py-2 mb-6 text-xs font-medium tracking-widest uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20">
+            The Ultimate Fizz Club
         </span>
 
         <!-- Heading -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-secondary dark:text-white leading-tight mb-5">
-          A Monthly Box of
-          <span class="block text-primary italic">
-            Pure Joy
-          </span>
+        <h1
+            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-white leading-tight">
+
+            A Monthly Box of
+
+            <span class="block text-primary italic mt-2">
+                Pure Joy
+            </span>
+
         </h1>
 
-        <!-- Paragraph -->
-        <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
-          Experience the surprise of seasonal scents and limited-edition creations every month. Hand-pressed bath bombs and artisan soaps, curated for your perfect self-care ritual.
+        <!-- Description -->
+        <p
+            class="mt-6 text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+
+            Experience the surprise of seasonal scents and limited-edition creations
+            every month. Hand-pressed bath bombs and artisan soaps curated for your
+            perfect self-care ritual.
+
         </p>
 
         <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <div
+            class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
 
-          <a href="#plans"
-             class="w-full sm:w-auto px-8 py-3.5 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300 text-center">
-            Claim Your Box
-          </a>
+            <a href="#plans"
+                class="px-8 py-4 bg-accent text-white font-medium rounded-2xl shadow-lg shadow-accent/30 hover:scale-105 transition-all duration-300">
+                Claim Your Box
+            </a>
 
-          <a href="#how-it-works"
-             class="w-full sm:w-auto px-8 py-3.5 border-2 border-primary text-primary font-medium rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-center">
-            How It Works
-          </a>
-
-        </div>
-      </div>
-
-      <!-- Image Content -->
-      <div class="relative order-2 w-full max-w-2xl mx-auto">
-
-        <!-- Decorative Blob -->
-        <div class="absolute -top-6 -right-6 w-40 sm:w-56 h-40 sm:h-56 bg-primary/10 rounded-full blur-3xl"></div>
-
-        <!-- Image Card -->
-        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 sm:border-6 lg:border-8 border-white dark:border-darkGrey group">
-          <img 
-            src="/assets/d1.jpg" 
-            alt="Monthly LatherBox Unboxing"
-            class="w-full h-[320px] sm:h-[420px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            onerror="this.src='https://placehold.co/800x600/6FCF97/ffffff?text=Subscription+Moment'"
-          >
+            <a href="#how-it-works"
+                class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium rounded-2xl hover:bg-white/20 transition-all duration-300">
+                How It Works
+            </a>
 
         </div>
-      </div>
+
+        <!-- Bottom Stats -->
+        <div
+            class="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-12">
+
+            <div>
+                <h3 class="text-2xl font-bold text-white">
+                    12+
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Monthly Themes
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-white">
+                    100%
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Handmade
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-bold text-white">
+                    5K+
+                </h3>
+                <p class="text-white/70 text-sm">
+                    Subscribers
+                </p>
+            </div>
+
+        </div>
 
     </div>
-  </div>
+
 </section>
 <section id="plans" class="py-20 bg-gray-50 dark:bg-darkGrey transition-colors duration-300">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
@@ -461,26 +490,42 @@
 
 <section class="py-20 bg-primary/5 dark:bg-darkGrey/50 transition-colors">
   <div class="mx-auto max-w-7xl px-4 xl:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white dark:bg-secondary p-6 sm:p-8 rounded-[2rem] text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all">
-        <div class="text-primary text-3xl mb-4"><i class="fas fa-leaf"></i></div>
-        <h4 class="font-medium dark:text-white mb-2">Pure Botanicals</h4>
-        <p class="text-xs text-gray-500">Real dried petals and seeds</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="group bg-white dark:bg-secondary rounded-[2rem] overflow-hidden text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all">
+        <div class="relative h-48 w-full overflow-hidden bg-gray-50">
+          <img src="/assets/pure_botanicals.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Pure Botanicals">
+        </div>
+        <div class="p-6">
+          <h4 class="font-medium dark:text-white mb-2">Pure Botanicals</h4>
+          <p class="text-xs text-gray-500">Real dried petals and seeds</p>
+        </div>
       </div>
-      <div class="bg-white dark:bg-secondary p-8 rounded-[2rem] text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all mt-6 md:mt-0">
-        <div class="text-accent text-3xl mb-4"><i class="fas fa-tint"></i></div>
-        <h4 class="font-medium dark:text-white mb-2">Essential Oils</h4>
-        <p class="text-xs text-gray-500">Pure therapeutic grade</p>
+      <div class="group bg-white dark:bg-secondary rounded-[2rem] overflow-hidden text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all mt-6 sm:mt-0">
+        <div class="relative h-48 w-full overflow-hidden bg-gray-50">
+          <img src="/assets/essential_oil.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Essential Oils">
+        </div>
+        <div class="p-6">
+          <h4 class="font-medium dark:text-white mb-2">Essential Oils</h4>
+          <p class="text-xs text-gray-500">Pure therapeutic grade</p>
+        </div>
       </div>
-      <div class="bg-white dark:bg-secondary p-6 sm:p-8 rounded-[2rem] text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all">
-        <div class="text-primary text-3xl mb-4"><i class="fas fa-recycle"></i></div>
-        <h4 class="font-medium dark:text-white mb-2">Plastic Free</h4>
-        <p class="text-xs text-gray-500">Compostable wrapping only</p>
+      <div class="group bg-white dark:bg-secondary rounded-[2rem] overflow-hidden text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all mt-6 md:mt-0">
+        <div class="relative h-48 w-full overflow-hidden bg-gray-50">
+          <img src="/assets/plastic_free.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Plastic Free">
+        </div>
+        <div class="p-6">
+          <h4 class="font-medium dark:text-white mb-2">Plastic Free</h4>
+          <p class="text-xs text-gray-500">Compostable wrapping only</p>
+        </div>
       </div>
-      <div class="bg-white dark:bg-secondary p-8 rounded-[2rem] text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all mt-6 md:mt-0">
-        <div class="text-accent text-3xl mb-4"><i class="fas fa-hand-holding-heart"></i></div>
-        <h4 class="font-medium dark:text-white mb-2">Fair Trade</h4>
-        <p class="text-xs text-gray-500">Ethically sourced ingredients</p>
+      <div class="group bg-white dark:bg-secondary rounded-[2rem] overflow-hidden text-center border border-gray-100 dark:border-white/5 hover:shadow-xl transition-all mt-6 md:mt-0">
+        <div class="relative h-48 w-full overflow-hidden bg-gray-50">
+          <img src="/assets/fair_trade.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Fair Trade">
+        </div>
+        <div class="p-6">
+          <h4 class="font-medium dark:text-white mb-2">Fair Trade</h4>
+          <p class="text-xs text-gray-500">Ethically sourced ingredients</p>
+        </div>
       </div>
     </div>
   </div>
